@@ -32,25 +32,27 @@ export default function BrandSlider() {
 
   return (
     <section className={styles.sliderSection}>
-      <div className={styles.textContainer}>
-        <h2 className={styles.subtitle}>
-          <span className={styles.yellow}>лучшие</span> <span className={styles.black}>товары</span>
-        </h2>
-        <p className={styles.mainText}>От ведущих мировых брэндов</p>
-      </div>
-      <div className={styles.brandContainer}>
-        {displayedBrands.map((src, index) => (
-          <Image key={index} src={src} alt={`Brand ${index}`} width={100} height={100} />
-        ))}
-      </div>
-      <div className={styles.dotsContainer}>
-        {Array.from({ length: totalSets }).map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.dot} ${index === currentSet ? styles.activeDot : ""}`}
-            onClick={() => handleDotClick(index)}
-          ></span>
-        ))}
+      <div className='container'>
+        <div className={styles.textContainer}>
+          <h2 className={styles.subtitle}>
+            <span className={styles.yellow}>лучшие</span> <span className={styles.black}>товары</span>
+          </h2>
+          <p className={styles.mainText}>От ведущих мировых брэндов</p>
+        </div>
+        <div className={styles.brandContainer}>
+          {displayedBrands.map((src, index) => (
+            <Image key={index} src={src} alt={`Brand ${index}`} width={100} height={100} />
+          ))}
+        </div>
+        <div className={styles.dotsContainer}>
+          {Array.from({ length: totalSets }).map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.dot} ${index === currentSet ? styles.activeDot : ""}`}
+              onClick={() => handleDotClick(index)}
+            ></span>
+          ))}
+        </div>
       </div>
     </section>
   );

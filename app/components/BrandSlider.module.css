@@ -8,7 +8,6 @@
 }
 
 .textContainer {
-    margin-left: 160px;
     margin-bottom: 20px;
 }
 
@@ -36,9 +35,8 @@
     display: flex;
     gap: 20px;
     overflow: hidden;
+    width: 100%;
     
-    width: 80%;
-    margin-left: 160px;
 }
 
 .dotsContainer {
