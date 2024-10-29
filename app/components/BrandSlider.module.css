@@ -36,6 +36,7 @@
     display: flex;
     gap: 20px;
     overflow: hidden;
+    
     width: 80%;
     margin-left: 160px;
 }

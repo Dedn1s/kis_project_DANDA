@@ -1,0 +1,94 @@
+.banner__limit { 
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.banner {
+    position: relative; 
+    background-image: url("/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Контент на баннере */
+.banner__content {
+    position: relative;
+    z-index: 2; 
+    color: white;
+    padding: 20px;
+    margin-left: 160px; 
+    text-align: left;
+}
+
+.banner__content h1 {
+    font-size: 60px; 
+    line-height: 1.2;
+    margin: 10px 0 10px;
+    max-width: 50%; 
+    white-space: pre-line; 
+}
+
+
+.banner__details {
+    font-size: 24px;
+    display: flex;
+    gap: 80px; 
+    align-items: center;
+    margin: 160px 0 10px;
+}
+
+.banner__subtitle {
+    font-size: 36px; 
+    line-height: 1.5; 
+    margin: 40px 0 20px; 
+    max-width: 50%; 
+    color: white; 
+}
+
+@media (max-width: 768px) {
+    .banner__limit {
+        height: 400px; 
+    }
+
+    .banner__content h1 {
+        font-size: 100px;
+    }
+
+    .banner__content p {
+        font-size: 80px !important; 
+        margin: 0 0 20px;
+    }    
+
+    .banner__content__button {
+        background-color: darkgoldenrod;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 30px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .banner__content__button:hover {
+        background-color: darkgoldenrod;
+    }
+
+    .plusCircle {
+        display: inline-block;
+        width: 30px; /* Ширина круга */
+        height: 30px; /* Высота круга */
+        border-radius: 50%; /* Скругление для круга */
+        background-color: darkgoldenrod; /* Цвет фона */
+        color: black; /* Цвет текста */
+        text-align: center; /* Центрирование текста */
+        line-height: 30px; /* Центрирование по вертикали */
+        margin-right: 8px; /* Отступ справа от круга */
+    }
+    
+}
