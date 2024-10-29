@@ -15,7 +15,6 @@
     height: 100%;
 }
 
-/* Контент на баннере */
 .banner__content {
     position: relative;
     z-index: 2; 
@@ -77,18 +76,5 @@
     
     .banner__content__button:hover {
         background-color: darkgoldenrod;
-    }
-
-    .plusCircle {
-        display: inline-block;
-        width: 30px; /* Ширина круга */
-        height: 30px; /* Высота круга */
-        border-radius: 50%; /* Скругление для круга */
-        background-color: darkgoldenrod; /* Цвет фона */
-        color: black; /* Цвет текста */
-        text-align: center; /* Центрирование текста */
-        line-height: 30px; /* Центрирование по вертикали */
-        margin-right: 8px; /* Отступ справа от круга */
-    }
-    
+    }  
 }
