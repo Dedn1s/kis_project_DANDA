@@ -1,7 +1,16 @@
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "./page.module.css";
+import Header from "./header";
 import CategoriesPage from "./components/Categories"
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <CategoriesPage />
+    <main className={inter.className}>
+     <Header />
+     <CategoriesPage />
+    </main>
   );
 }
