@@ -1,6 +1,6 @@
 .header {
-    margin-left: 160px;
-    margin-right: 160px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .menu {
@@ -176,4 +176,30 @@
 .hat_phone_number img{
     height: 92px;
     margin-left: 10px;
+}
+
+.hat_bascket{
+    display: flex;
+}
+
+.hat_bascket img{
+    height: 44px;
+}
+
+.hat_bascket_text{
+    align-self: center;
+}
+
+.hat_bascket_text p{
+    margin: 4px;
+}
+
+@media (max-width: 768px) { 
+ 
+    .header { 
+        /* position: relative; */ 
+        width: 92%; 
+        margin: 0 auto; 
+    } 
+ 
 }
