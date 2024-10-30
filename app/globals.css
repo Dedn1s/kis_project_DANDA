@@ -1,1 +1,35 @@
+:root {
+    --primary-color: rgb(255, 200, 94);
+}
 
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-inter), sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+.container {
+    /* position: relative; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        /* position: relative; */
+        width: 90%;
+        margin: 0 auto;
+    }
+
+}
