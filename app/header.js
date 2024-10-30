@@ -71,7 +71,6 @@ export default function header() {
                     <p>Прайс лист</p>
                     <img src="/download.png"></img>
                 </button>
-
                 <div className={styles.hat_bascket}>
                     <img src="/bascket.png"></img>
                     <div className={styles.hat_bascket_text}>
