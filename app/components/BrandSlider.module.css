@@ -1,0 +1,62 @@
+.sliderSection {
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.textContainer {
+    margin-left: 160px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 44px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.yellow {
+    color: Gold;
+}
+
+.black {
+    color: black;
+}
+
+.mainText {
+    font-size: 20px;
+    color: gray;
+    text-align: left;
+}
+
+.brandContainer {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    width: 80%;
+    margin-left: 160px;
+}
+
+.dotsContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+    width: 100%; 
+    position: relative; 
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: Lightgray;
+    cursor: pointer;
+}
+
+.activeDot {
+    background-color: Gold;
+}

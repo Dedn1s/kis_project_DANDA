@@ -1,4 +1,3 @@
-// banner.js
 'use client';
 
 import styles from "./../page.module.css";

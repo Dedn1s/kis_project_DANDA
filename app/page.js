@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Banner from "./components/Banner";
 import Header from "./header";
 import CategoriesPage from "./components/Categories"
+import BrandSlider from "./components/Brends";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +14,7 @@ export default function Home() {
      <Header />
      <Banner/>
      <CategoriesPage />
+     <BrandSlider />
     </main>
   );
 }
