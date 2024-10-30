@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
+import Banner from "./components/Banner";
 import Header from "./header";
 import CategoriesPage from "./components/Categories"
 
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <main className={inter.className}>
      <Header />
+     <Banner/>
      <CategoriesPage />
     </main>
   );
