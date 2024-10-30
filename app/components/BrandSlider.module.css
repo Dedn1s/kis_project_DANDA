@@ -1,61 +1,79 @@
-.sliderSection {
-    height: 500px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+.sliderContainer {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 40px;
 }
 
-.textContainer {
-    margin-bottom: 20px;
+.header {
+  margin-bottom: 20px; 
+}
+
+.title {
+  font-weight: bold; 
+  font-size: 48px; 
+  line-height: 48px; 
+  color: var(--primary-color); 
 }
 
 .subtitle {
-    font-size: 44px;
-    margin-bottom: 10px;
-    text-align: left;
+  font-size: 24px; 
+  line-height: 24px; 
+  font-weight: 300; 
 }
 
-.yellow {
-    color: Gold;
+.title span {
+  color: var(--primary-color); 
 }
 
-.black {
-    color: black;
+.title .products {
+  color: black; 
 }
 
-.mainText {
-    font-size: 20px;
-    color: gray;
-    text-align: left;
+.slidesWrapper {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
-.brandContainer {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-    width: 100%;
-    
+.slide {
+  display: flex;
+  gap: 88px;
+  justify-content: start;
+  width: 100%;
+  flex: 0 0 100%;
 }
 
-.dotsContainer {
-    display: flex;
-    gap: 10px;
-    justify-content: center; 
-    width: 100%; 
-    position: relative; 
-    margin-top: 20px;
+.imageContainer {
+  width: 102px;
+  height: 77px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: Lightgray;
-    cursor: pointer;
+  width: 16px;
+  height: 7px;
+  border-radius: 100px;
+  background: rgb(63, 78, 101);
+  opacity: 0.1;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .activeDot {
-    background-color: Gold;
+  width: 26px;
+  background: rgb(255, 200, 94);
+  opacity: 1;
 }

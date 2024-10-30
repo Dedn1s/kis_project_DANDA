@@ -33,7 +33,7 @@
 
 
 .price_button{
-    background-color: #ebdb00;
+    background-color: var(--primary-color);
     display: inline-block;
     margin: 0 auto;
     color: white;
