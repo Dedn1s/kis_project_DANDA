@@ -71,6 +71,14 @@ export default function header() {
                     <p>Прайс лист</p>
                     <img src="/download.png"></img>
                 </button>
+
+                <div className={styles.hat_bascket}>
+                    <img src="/bascket.png"></img>
+                    <div className={styles.hat_bascket_text}>
+                        <p className={styles.loc_name_text2}>Корзина</p>
+                        <p className={styles.loc_name_text1}>12 478</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
