@@ -1,11 +1,13 @@
-import styles from "./header.module.css";
+"use client";
 
-export default function header() {
+import styles from "./header.module.css";
+import Button from "./components/Button";
+
+export default function Header() {
     return (
         <div className={styles.header}>
             <div className={styles.menu}>
                 <div className={styles.loc_name}>
-
                     <div className={styles.loc_name_block}>
                         <img src="/point.png" className={styles.loc_name_ico}></img>
                         <div>
@@ -29,7 +31,6 @@ export default function header() {
                             </p>
                         </div>
                     </div>
-
                 </div>
 
                 <div className={styles.buttons}>
@@ -46,10 +47,12 @@ export default function header() {
             <div className={styles.hat}>
                 <img src="/logo.png" className={styles.hat_logo}></img>
 
-                <button className={styles.hat_button} onClick={"Nothing"}>
-                    <p>Каталог</p>
-                    <img src="/catalog.png"></img>
-                </button>
+                <Button
+                    text="Каталог"
+                    onClick={() => alert("Кнопка в разработке")} 
+                    style={{ width: "180px", height: "59px" }}
+                    icon="/catalog.png"  
+                />
 
                 <form className={styles.hat_search} action="" method="get">
                     <input name="s" placeholder="Поиск..." type="search"></input>
@@ -67,10 +70,12 @@ export default function header() {
                     <img src="/phone_assistant.png"></img>
                 </div>
 
-                <button className={styles.hat_button} onClick={"Nothing"}>
-                    <p>Прайс лист</p>
-                    <img src="/download.png"></img>
-                </button>
+                <Button 
+                    text="Прайс лист" 
+                    onClick={() => alert("Кнопка в разработке")} 
+                    style={{ width: "200px", height: "59px" }}
+                    icon="/download.png"
+                />
                 
                 <div className={styles.hat_bascket}>
                     <img src="/bascket.png"></img>

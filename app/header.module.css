@@ -82,46 +82,25 @@
 .hat_logo {
     height: 68px;
     width: 156px;
+    margin-right: 8px;
     align-self: center;
 }
 
-.hat_button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:#FFC85E;
-    color: white;
-    border: none;
-    border-radius: 80px;
-    width: 192px;
-    height: 60px;
-    cursor: pointer;
-}
-
-.hat_button img{
-    height: 15px;
-    width: 15px;
-    align-self: center;
-    margin-left: 5px;
-}
-
-.hat_button p{
-    font-size: 16px;
-}
 
 .hat_search{
     display: flex;
     align-items: center;
+    margin-left: 8px;
     justify-content: center;
     background-color: #EDEDED;
     border: none;
     border-radius: 80px;
-    width: 264px;
+    width: 256px;
     height: 60px;
 }
 
 .hat_search input{
-    width: 180px;
+    width: 176px;
     height: 60px;
     background:none;
     border: none;
@@ -146,7 +125,7 @@
 }
 
 .hat_phone_number{
-    height: 92px;
+    height: 84px;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -154,7 +133,7 @@
 }
 
 .hat_phone_number p{
-    font-size: 12px;
+    font-size: 10px;
     color: #3F4E65;
     
 }
@@ -167,7 +146,7 @@
 
 
 .hat_phone_link{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     color: #111111;
@@ -175,11 +154,13 @@
 
 .hat_phone_number img{
     height: 92px;
-    margin-left: 10px;
+    margin-left: 16px;
+    margin-right: 12px;
 }
 
 .hat_bascket{
     display: flex;
+    margin-left: 12px;
 }
 
 .hat_bascket img{

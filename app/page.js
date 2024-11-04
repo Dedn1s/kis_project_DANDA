@@ -7,6 +7,8 @@ import CategoriesPage from "./components/Categories"
 import BrandSlider from "./components/Brends";
 import Footer from "./footer"
 import Contacts from "./contacts/contsct";
+import SaleItems from "./components/saleItems"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,10 +17,12 @@ export default function Home() {
     <main className={inter.className}>
      <Header />
      <Banner/>
+     <SaleItems/>
      <CategoriesPage />
      <BrandSlider />
      <Contacts />
      <Footer />
     </main>
+
   );
 }
