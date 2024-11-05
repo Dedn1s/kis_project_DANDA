@@ -3,11 +3,11 @@ import { Inter } from "next/font/google";
 import styles from "./page.module.css";
 import Banner from "./components/Banner";
 import Header from "./header";
-import CategoriesPage from "./components/Categories"
+import CategoriesPage from "./components/Categories";
 import BrandSlider from "./components/Brends";
 import Footer from "./footer"
 import Contacts from "./contacts/contsct";
-import SaleItems from "./components/saleItems"
+import SaleItems from "./components/saleItems";
 
 
 const inter = Inter({ subsets: ['latin'] })

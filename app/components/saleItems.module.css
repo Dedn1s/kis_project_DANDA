@@ -206,3 +206,29 @@
     letter-spacing: 0%; 
     text-align: left; 
 }
+
+@media (max-width: 768px) {
+    .saleItemsContainer {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .title {
+        position: relative;
+        width: auto;
+        height: auto;
+        margin-top: 20px; 
+        margin-left: 8px;
+        margin-right: 47px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 120%;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .grid, .card, .image, .description, .popularTag, .volumeText,
+    .productDescription, .barcode, .producer, .brand, .price, .button {
+        display: none;
+    }
+}
