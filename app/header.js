@@ -3,7 +3,6 @@
 import styles from "./header.module.css";
 import Button from "./components/Button";
 import TextForm from "./components/TextForm"
-import { Search } from "lucide-react";
 
 export default function Header() {
     return (

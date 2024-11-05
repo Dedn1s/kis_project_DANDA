@@ -19,7 +19,7 @@
   }
   
   .button:active,
-  .button:focus {
+  .button:focus { 
     background: rgb(227, 154, 7);
   }
   
