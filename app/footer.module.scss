@@ -86,10 +86,36 @@
         margin: 0 1.5% 24px 1.5%;
 
     .price{
+        display: block;
+
+    .price_list_title{
         display: none;
+    }
 
+    .button{
+        display: block;
+        position: absolute;
+        top: 233%;
+        left: 49%;
+        }
+    .button Button{
+        width: 149px; 
+        height: 40px;
+        font-size: 12px;
+        .button Button img{
+            margin-left: 8px;
+            width: 20px;
+        }
+    }
 
-
+    .connection_mas{
+        display: block;
+        position: absolute;
+        top: 292%;
+        left: 50%;
+        }
+    
+    
     }
     
     .menu {
@@ -102,14 +128,11 @@
     .contacts{
         clear: both;
         margin-bottom: 0;
+        margin-right: 50%;
     }
 
 
-    .Button{
-        display: block;
-        top: 5px;
-        left: 30px;
-    }
+    
     
     }
     

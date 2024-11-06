@@ -81,15 +81,18 @@ export default function Footer() {
             <div className={style.price}>
             <ul className={style.list}>
             <h3 className={style.price_list_title}>Скачать прайс-лист:</h3>
-                <Button className={style.Button}
+            <div className={style.button}>
+                <Button 
                     text="Прайс лист" 
                     onClick={() => alert("Кнопка в разработке")} 
-                    style={{ width: "200px", height: "59px" }}
                     icon="/download.png"
                 />
+                </div>
+            <div className={style.connection_mas}>
                 <li className={style.no_bullet}>Связь в мессенджерах</li>
                 <img src="/tg.png" height="40" alt="Telegram"></img>
                 <img src="/watsap.png" height="40" alt="WhatsApp"></img>
+            </div>
             </ul>
         </div>
         </div>
