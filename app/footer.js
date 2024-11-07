@@ -2,6 +2,7 @@
 
 import style from "./footer.module.css"
 import Button from "./components/Button";
+import TextForm from "./components/TextForm"
 
 export default function Footer() {
   return (
@@ -20,7 +21,14 @@ export default function Footer() {
                 </li>
                 <li className={style.subscription_title}>Подпишись на скидки и акции</li>
                 <li>
-                    <input className={style.input_mail} type="email" placeholder="Введите ваш E-mail:" id="email" name="email" />
+                <TextForm 
+                    text="Введите ваш email..." 
+                    type="email"
+                    onClick={() => alert("Email в разработке")} 
+                    style={{ width: "284px", height: "60px" }}
+                    style_button={{width: "40px", height: "40px"}}
+                    icon="/arrow.png"
+                />
                 </li>
             </ul>
         </div>
