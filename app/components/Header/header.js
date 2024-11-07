@@ -1,8 +1,8 @@
 "use client";
 
 import styles from "./header.module.css";
-import Button from "./components/Button";
-import TextForm from "./components/TextForm"
+import Button from "../sub_components/Button/Button";
+import TextForm from "../sub_components/TextForm/TextForm"
 
 export default function Header() {
     return (

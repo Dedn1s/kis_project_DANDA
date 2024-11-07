@@ -1,8 +1,8 @@
 "use client";
 
 import styles from "./Header_mobile.module.css";
-import Button from "./Button";
-import TextForm from "./TextForm"
+import Button from "../sub_components/Button/Button";
+import TextForm from "../sub_components/TextForm/TextForm"
 import { useState } from "react";
 import { Icon } from "lucide-react";
 

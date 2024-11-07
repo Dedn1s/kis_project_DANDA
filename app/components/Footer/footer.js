@@ -1,7 +1,7 @@
 "use client";
 
 import style from "./footer.module.scss"
-import Button from "./components/Button";
+import Button from "../sub_components/Button/Button";
 
 const column_1 = [
     'Компание "Султан" - снабжаем розничные магазины товарами"под ключ" в Кокчетве и Акмолинской области',
