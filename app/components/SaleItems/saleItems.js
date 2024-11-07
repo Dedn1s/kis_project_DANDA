@@ -1,6 +1,6 @@
 "use client";
 
-import styles from './saleItems.module.css'; 
+import styles from './saleItems.module.scss'; 
 import Button from "../sub_components/Button/Button";
 
 const products = [

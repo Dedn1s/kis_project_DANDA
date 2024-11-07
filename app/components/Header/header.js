@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./header.module.css";
+import styles from "./Header_mobile.module.scss";
 import Button from "../sub_components/Button/Button";
 import TextForm from "../sub_components/TextForm/TextForm"
 
