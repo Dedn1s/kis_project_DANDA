@@ -12,6 +12,9 @@ const categories = [
 
 export default function CategoriesPage() {
   return (
+    <div></div>
+
+    /*
     <div className="categories-container">
         <div className="header">
             <h1 className="title">
@@ -28,5 +31,6 @@ export default function CategoriesPage() {
         ))}
       </div>
     </div>
+    */
   );
 }
