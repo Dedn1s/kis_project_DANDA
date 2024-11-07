@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Button.module.css";
+import styles from "./Button.module.scss";
 
 export default function Button({ text, onClick, href, style, icon }) {
     const handleClick = () => {
