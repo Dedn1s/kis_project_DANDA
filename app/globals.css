@@ -1,1 +1,23 @@
+:root {
+    --primary-color: rgb(255, 200, 94);
+}
 
+body {
+    font-family: 'Inter', sans-serif; 
+}
+
+.container {
+    /* position: relative; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        /* position: relative; */
+        width: 90%;
+        margin: 0 auto;
+    }
+}
