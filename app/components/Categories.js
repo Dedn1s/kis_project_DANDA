@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import "../globals.css";
-import styles from "./Categories.css";
+import styles from "./Categories.modules.css";
 
 const categories = [
   { name: "Бытовая химия", image: "/chemist.png", link: "/household-chemicals" },
