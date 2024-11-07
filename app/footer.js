@@ -2,7 +2,6 @@
 
 import style from "./footer.module.scss"
 import Button from "./components/Button";
-import TextForm from "./components/TextForm"
 
 const column_1 = [
     'Компание "Султан" - снабжаем розничные магазины товарами"под ключ" в Кокчетве и Акмолинской области',
@@ -54,14 +53,7 @@ export default function Footer() {
             <ul className={style.list}>
                 {listItems_1}
                 <li>
-                <TextForm 
-                    text="Введите ваш email..." 
-                    type="email"
-                    onClick={() => alert("Email в разработке")} 
-                    style={{ width: "284px", height: "60px" }}
-                    style_button={{width: "40px", height: "40px"}}
-                    icon="/arrow.png"
-                />
+                    <input className={style.input_mail} type="email" placeholder="Введите ваш E-mail:" id="email" name="email" />
                 </li>
             </ul>
         </div>
