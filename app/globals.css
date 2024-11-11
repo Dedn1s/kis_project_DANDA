@@ -1,5 +1,10 @@
 :root {
     --primary-color: rgb(255, 200, 94);
+    --black: rgb(17, 17, 17);
+    --white: rgb(255, 255, 255);
+    --dark-gray: #333;
+    --gray: rgb(63, 78, 101);
+    --green: rgb(31, 216, 93);
 }
 
 body {
@@ -21,3 +26,35 @@ body {
         margin: 0 auto;
     }
 }
+
+
+/*
+.swiper__pagination {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: relative;
+    height: 20px;
+    display: flex;
+    z-index: 1111;
+    justify-content: center;
+
+
+    .swiper-custom-bullet {
+        width: 16px;
+        height: 7px;
+        border-radius: 100px;
+        background: rgb(63, 78, 101);
+        opacity: 0.1;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .swiper-custom-bullet-active {
+        width: 26px;
+        background: rgb(255, 200, 94);
+        opacity: 1;
+    }
+} */

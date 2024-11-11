@@ -1,5 +1,5 @@
-$color_1: #ffffff;
-$color_2: rgb(63, 78, 101);
+$color_1: var(--white);
+$color_2: var(--gray);
 $background-color_1: var(--primary-color);
 
 .banner__limit {
