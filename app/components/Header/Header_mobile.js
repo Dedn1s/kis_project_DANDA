@@ -96,8 +96,8 @@ export default function Header_mobile() {
                     <img src="/bascket.png"></img>
                 </button>
             </div>
-            <div className={styles.catalog_search} onClick={() => alert("Кнопка в разработке")}>
-                <button className={styles.half_button}>
+            <div className={styles.catalog_search}>
+                <button className={styles.half_button} onClick={() => alert("Кнопка в разработке")}>
                     <img src="/catalog_blue.png"></img>
                     <p>Каталог</p>
                 </button>
