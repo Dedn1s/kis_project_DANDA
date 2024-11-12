@@ -2,7 +2,7 @@
 
 import styles from './saleItems.module.scss'; 
 import Button from "../sub_components/Button/Button";
-import products from '/base.json'; 
+import products from '/products.json'; 
 
 export default function SaleItems() {
     return (

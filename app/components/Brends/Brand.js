@@ -1,24 +1,17 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import SwiperCore, { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/autoplay"; 
 
 import styles from "./BrandSlider.module.scss";
 
+SwiperCore.use([Pagination, Autoplay]);
+
 export default function BrandSlider() {
-  const brandImages = [
-    "/airwick.png", "/masterfresh.png", "/brand2.png",
-    "/brand3.png", "/brand5.png", "/brand6.png",
-    "/brand7.png", "/brand8.avif", "/listik.png",
-    "/image3.png", "/airwick.png", "/masterfresh.png",
-    "/brand2.png", "/brand3.png", "/brand5.png",
-    "/brand6.png", "/brand7.png", "/brand8.avif",
-    "/listik.png", "/image3.png", "/airwick.png",
-    "/masterfresh.png", "/brand2.png", "/brand3.png",
-    "/brand5.png", "/brand6.png", "/brand7.png",
-    "/brand8.avif", "/listik.png", "/image3.png",
-  ];
+  const brandCount = 11;
+  const brands = Array.from({ length: brandCount }, (_, index) => index + 1);
 
   return (
     <>
@@ -31,9 +24,13 @@ export default function BrandSlider() {
         </div>
 
         <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={40}
+          spaceBetween={2}
           slidesPerView={10}
+          loop={true}
+          autoplay={{
+            delay: 7000, 
+            disableOnInteraction: false,  
+          }}
           pagination={{
             el: "#containerForBullets",
             type: "bullets",
@@ -41,19 +38,22 @@ export default function BrandSlider() {
             bulletActiveClass: "swiper-custom-bullet-active",
             clickable: true
           }}
-          autoplay={{ delay: 10000 }}
-          loop={true}
           className={styles.swiper__custom}
           breakpoints={{
             0: { slidesPerView: 3 },
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 10 },
           }}
+          speed={500}
         >
-          {brandImages.map((img, index) => (
+          {brands.map((num, index) => (
             <SwiperSlide key={index} className={styles.slide}>
               <div className={styles.slideContent}>
-                <Image src={img} alt={`Brand ${index}`} width={102} height={77} />
+                <img
+                  src={`/brands/brand-${num}.png`}  
+                  alt={`Brand ${num}`} 
+                  style={{ maxHeight: '100%', maxWidth: 'auto' }}
+                />
               </div>
             </SwiperSlide>
           ))}
