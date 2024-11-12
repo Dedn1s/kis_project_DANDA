@@ -1,7 +1,7 @@
 "use client";
 
-import styles from './saleItems.module.css'; 
-import Button from "./Button";
+import styles from './saleItems.module.scss'; 
+import Button from "../sub_components/Button/Button";
 
 const products = [
     { id: 1, description: "AOS Ср-во для мытья посуды Апельсин+мята", barcode: "4604049097548", brand: "AOS", volume: "450 мл", image: "/sorti.png" },

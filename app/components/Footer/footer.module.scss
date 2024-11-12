@@ -1,0 +1,198 @@
+.footer {
+    background-color: #3F4E65;
+    color: #fff;
+    padding: 20px 50px 20px;
+
+
+}
+
+.footer_text{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.column {
+    width: 27%;
+    padding: 0 2%;
+}
+
+#p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+#li {
+    margin-bottom: 15px;
+}
+
+
+.price_button{
+    background-color: var(--primary-color);
+    display: inline-block;
+    margin: 0 auto;
+    color: white;
+    border: none;
+    padding: 0;
+    font-size: 15px;
+    height: 50px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 35px;
+
+    
+}
+
+.input_mail{
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 0 auto;
+    color: rgb(83, 83, 83);
+    border: none;
+    padding:  0px 15px 0px;
+    font-size: 10px;
+    height: 30px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+@media (max-width: 768px){
+
+    .footer {
+        background-color: #3F4E65;
+        color: #fff;
+        padding: 5% 2% 5%;
+        
+    
+    }
+    
+    .footer_text{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .column {
+        display: block;
+        width: 100%;
+        margin: 0 1.5% 24px 1.5%;
+
+    .price{
+        display: block;
+        margin-bottom: 80%;
+    .price_list_title{
+        display: none;
+    }
+
+    .button{
+        display: block;
+        position: absolute;
+        margin-top: -128%;
+        margin-left: 50%;
+        }
+    .button Button{
+        width: 149px; 
+        height: 40px;
+        font-size: 12px;
+        .button Button img{
+            margin-left: 8px;
+            width: 20px;
+        }
+    }
+
+    .connection_mas{
+        display: block;
+        position: absolute;
+        margin-bottom: 10%;
+        margin-left: 50%;
+        }
+    
+    
+    }
+    
+    .menu {
+        float: left;
+      }
+
+    .categories{
+        float: right;
+    }
+    .contacts{
+        clear: both;
+        margin-bottom: 0;
+        margin-right: 50%;
+    }
+
+
+    
+    
+    }
+    
+       
+
+    .p {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: none;
+    }
+    
+    .ul {
+        list-style-type: none;
+        padding-inline-start: 0;
+        
+    }
+
+    
+    .list{
+        margin: 0;
+        padding-inline-start: 0;
+        list-style-type: none;
+    }
+    
+    
+    .price_button{
+        background-color: var(--primary-color);
+        display: none;
+        margin: 0 auto;
+        color: white;
+        border: none;
+        padding: 0;
+        font-size: 15px;
+        height: 50px;
+        width: 130px;
+        cursor: pointer;
+        border-radius: 35px;
+    
+        
+    }
+    
+    .input_mail{
+        background-color: #ffffff;
+        display: inline-block;
+        margin: 0 auto;
+        color: rgb(83, 83, 83);
+        border: none;
+        padding:  0px 15px 0px;
+        font-size: 10px;
+        height: 30px;
+        width: 130px;
+        cursor: pointer;
+        border-radius: 35px;
+    }
+    
+
+
+
+
+
+
+}

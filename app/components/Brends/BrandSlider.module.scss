@@ -1,0 +1,108 @@
+$color_1: var(--primary-color);
+$color_2: black;
+$color_3: rgb(63, 78, 101);
+
+.sliderContainer {
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	padding-top: 20px;
+	margin-bottom: 40px;
+	.swiper-pagination {
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+	}
+	.swiper-pagination-bullet {
+		width: 16px;
+		height: 7px;
+		border-radius: 100px;
+		background: rgb(63, 78, 101);
+		opacity: 0.1;
+		margin: 0 5px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.swiper-pagination-bullet-active {
+		width: 26px;
+		background: rgb(255, 200, 94);
+		opacity: 1;
+	}
+}
+.header {
+	margin-bottom: 20px;
+}
+.title {
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 48px;
+	color: $color_1;
+	span {
+		color: $color_1;
+	}
+	.products {
+		color: $color_2;
+	}
+}
+.subtitle {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 300;
+}
+.imageContainer {
+	width: 102px;
+	height: 77px;
+	border-radius: 10px;
+	background: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.swiper {
+	width: 100%;
+}
+.slideContent {
+	display: flex;
+	gap: 20px;
+	justify-content: start;
+}
+@media (max-width: 768px) {
+	.sliderContainer {
+		width: 90%;
+		padding-top: 10px;
+		margin-bottom: 20px;
+	}
+	.header {
+		margin-bottom: 10px;
+		position: relative;
+		padding: 0 10px;
+	}
+	.title {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.2;
+		text-align: left;
+		text-transform: uppercase;
+		color: $color_1;
+		margin-bottom: 5px;
+	}
+	.subtitle {
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 1.2;
+		text-align: left;
+		color: $color_3;
+	}
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 5px;
+	}
+	.swiper-pagination-bullet-active {
+		width: 20px;
+	}
+}

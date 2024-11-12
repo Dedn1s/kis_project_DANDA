@@ -1,7 +1,10 @@
-import styles from "./contact.module.css";
+import styles from "./contact.module.scss";
 
 export default function Contacts() {
     return (
+
+        <div></div>
+        /*
         <div className={styles.cont}>
             <img src='/map.png' alt="Map" />
             <div className={styles.rectangle}></div>
@@ -31,5 +34,6 @@ export default function Contacts() {
                     </div>
                 </div>
         </div>
+        */
     );
 }

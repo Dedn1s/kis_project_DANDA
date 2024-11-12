@@ -1,7 +1,8 @@
 "use client";
 
-import styles from "./header.module.css";
-import Button from "./components/Button";
+import styles from "./Header_mobile.module.scss";
+import Button from "../sub_components/Button/Button";
+import TextForm from "../sub_components/TextForm/TextForm"
 
 export default function Header() {
     return (
@@ -53,13 +54,15 @@ export default function Header() {
                     style={{ width: "180px", height: "59px" }}
                     icon="/catalog.png"  
                 />
-
-                <form className={styles.hat_search} action="" method="get">
-                    <input name="s" placeholder="Поиск..." type="search"></input>
-                    <button onClick={"Nothing"}>
-                        <img src="/search.png"></img>
-                    </button>
-                </form>
+                
+                <TextForm 
+                    text="Поиск..." 
+                    type="search"
+                    onClick={() => alert("Поиск в разработке")} 
+                    style={{ width: "256px", height: "60px" }}
+                    style_button={{width: "40px", height: "40px"}}
+                    icon="/search.png"
+                />
 
                 <div className={styles.hat_phone_number}>
                     <div>

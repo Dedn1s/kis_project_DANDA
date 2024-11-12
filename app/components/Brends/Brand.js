@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
-import styles from "./BrandSlider.module.css";
+import styles from "./BrandSlider.module.scss";
 
 export default function BrandSlider() {
   const brandImages = [
