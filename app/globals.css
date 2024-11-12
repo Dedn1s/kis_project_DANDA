@@ -1,5 +1,10 @@
 :root {
     --primary-color: rgb(255, 200, 94);
+    --black: rgb(17, 17, 17);
+    --white: rgb(255, 255, 255);
+    --dark-gray: #333;
+    --gray: rgb(63, 78, 101);
+    --green: rgb(31, 216, 93);
 }
 
 body {
@@ -21,3 +26,5 @@ body {
         margin: 0 auto;
     }
 }
+
+

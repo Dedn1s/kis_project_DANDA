@@ -1,8 +1,8 @@
 $color_1: var(--primary-color);
-$color_2: #333;
-$color_3: rgb(255, 255, 255);
-$color_4: rgb(63, 78, 101);
-$color_5: rgb(17, 17, 17);
+$color_2: var(--dark-gray);
+$color_3: var(--white);
+$color_4: var(--gray);
+$color_5: var(--black);
 $font-family_1: Inter, sans-serif;
 
 .saleItemsContainer {
@@ -33,14 +33,13 @@ $font-family_1: Inter, sans-serif;
 	width: 312px;
 	height: 490px;
 	border-radius: 10px;
-	box-shadow: 0px 14px 39px -11px rgba(0, 0, 0, 0.06);
-	background: rgb(255, 255, 255);
+	box-shadow: 0px 14px 39px -11px var(--gray);
+	background: var(--white);
 	position: relative;
 }
 .image {
-	width: 92px;
-	height: 200px;
 	border-radius: 10px 10px 0 0;
+	height: 200px;
 	object-fit: cover;
 	display: block;
 	margin: 0 auto;
@@ -53,14 +52,14 @@ $font-family_1: Inter, sans-serif;
 }
 .popularTag {
 	position: relative;
-	top: 29px;
-	left: 15px;
+	top: 30px;
+	left: 16px;
 	width: 96px;
-	height: 25px;
+	height: 26px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: rgb(31, 216, 93);
+	background: var(--green);
 	border-radius: 5px;
 }
 .popularText {
@@ -74,25 +73,25 @@ $font-family_1: Inter, sans-serif;
 }
 .vectorBytilka {
 	position: absolute;
-	width: 9px;
-	height: 15px;
-	left: 25px;
+	width: 8px;
+	height: 16px;
+	left: 26px;
 	top: 240px;
-	background: rgb(255, 255, 255);
+	background: var(--white);
 }
 .vectorBox {
 	position: absolute;
 	width: 20px;
 	height: 14px;
-	left: 23px;
-	top: 241px;
-	background: rgb(255, 255, 255);
+	left: 24px;
+	top: 242px;
+	background: var(--white);
 }
 .volumeText {
 	position: absolute;
 	top: 240px;
 	left: 52px;
-	width: 55px;
+	width: 56px;
 	height: 16px;
 	color: $color_4;
 	font-family: $font-family_1;
@@ -106,7 +105,7 @@ $font-family_1: Inter, sans-serif;
 	position: absolute;
 	width: 282px;
 	height: 42px;
-	left: 23px;
+	left: 24px;
 	top: 266px;
 	color: $color_5;
 	font-family: $font-family_1;
@@ -122,15 +121,15 @@ $font-family_1: Inter, sans-serif;
 }
 .barcode {
 	position: absolute;
-	width: 73px;
-	height: 21px;
+	width: 74px;
+	height: 22px;
 	color: $color_4;
 	font-family: $font-family_1;
 	font-size: 14px;
 	font-weight: 300;
 	text-align: left;
-	top: 332px;
-	left: 23px;
+	top: 336px;
+	left: 24px;
 }
 .barcodeNumber {
 	position: absolute;
@@ -149,15 +148,15 @@ $font-family_1: Inter, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 	text-align: left;
-	top: 354px;
-	left: 23px;
+	top: 358px;
+	left: 24px;
 }
 .producerName {
 	color: $color_5;
 	font-family: $font-family_1;
 	font-size: 14px;
 	font-weight: 500;
-	margin-left: 5px;
+	margin-left: 6px;
 }
 .brand {
 	position: absolute;
@@ -166,8 +165,8 @@ $font-family_1: Inter, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 	text-align: left;
-	top: 374px;
-	left: 23px;
+	top: 378px;
+	left: 24px;
 }
 .brandName {
 	color: $color_5;
@@ -179,8 +178,8 @@ $font-family_1: Inter, sans-serif;
 .price {
 	position: absolute;
 	width: 70px;
-	height: 21px;
-	left: 23px;
+	height: 22px;
+	left: 24px;
 	top: 430px;
 	color: $color_5;
 	font-family: $font-family_1;

@@ -1,66 +1,65 @@
-"use client";
-
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css/autoplay"; 
+
 import styles from "./BrandSlider.module.scss";
 
-export default function BrandSlider() {
-  const brandImages = [
-    "/airwick.png", "/masterfresh.png", "/brand2.png",
-    "/brand3.png", "/brand5.png", "/brand6.png",
-    "/brand7.png", "/brand8.avif", "/listik.png",
-    "/image3.png", "/airwick.png", "/masterfresh.png",
-    "/brand2.png", "/brand3.png", "/brand5.png",
-    "/brand6.png", "/brand7.png", "/brand8.avif",
-    "/listik.png", "/image3.png", "/airwick.png",
-    "/masterfresh.png", "/brand2.png", "/brand3.png",
-    "/brand5.png", "/brand6.png", "/brand7.png",
-    "/brand8.avif", "/listik.png", "/image3.png",
-  ];
+SwiperCore.use([Pagination, Autoplay]);
 
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
-  const itemsPerSlide = isMobile ? 3 : 10;
-  const groupedImages = [];
-  
-  for (let i = 0; i < brandImages.length; i += itemsPerSlide) {
-    groupedImages.push(brandImages.slice(i, i + itemsPerSlide));
-  }
+export default function BrandSlider() {
+  const brandCount = 11;
+  const brands = Array.from({ length: brandCount }, (_, index) => index + 1);
 
   return (
-    <div className={styles.sliderContainer}>
-      <div className={styles.header}>
-        <h1 className={styles.title}>
-          <span>лучшие</span> <span className={styles.products}>товары</span>
-        </h1>
-        <h2 className={styles.subtitle}>От ведущих мировых брэндов</h2>
+    <>
+      <div className={styles.sliderContainer}>
+        <div className={styles.header}>
+          <h1 className={styles.title}>
+            <span>лучшие</span> <span className={styles.products}>товары</span>
+          </h1>
+          <h2 className={styles.subtitle}>От ведущих мировых брэндов</h2>
+        </div>
+
+        <Swiper
+          spaceBetween={2}
+          slidesPerView={10}
+          loop={true}
+          autoplay={{
+            delay: 7000, 
+            disableOnInteraction: false,  
+          }}
+          pagination={{
+            el: "#containerForBullets",
+            type: "bullets",
+            bulletClass: "swiper-custom-bullet",
+            bulletActiveClass: "swiper-custom-bullet-active",
+            clickable: true
+          }}
+          className={styles.swiper__custom}
+          breakpoints={{
+            0: { slidesPerView: 3 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 10 },
+          }}
+          speed={500}
+        >
+          {brands.map((num, index) => (
+            <SwiperSlide key={index} className={styles.slide}>
+              <div className={styles.slideContent}>
+                <img
+                  src={`/brands/brand-${num}.png`}  
+                  alt={`Brand ${num}`} 
+                  style={{ maxHeight: '100%', maxWidth: 'auto' }}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+          <div id="containerForBullets" className={styles.swiper__pagination}></div>
+        </Swiper>
       </div>
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 10000 }}
-        loop={true}
-        className={styles.swiper}
-        breakpoints={{
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 1 }, 
-          1024: { slidesPerView: 1 }, 
-        }}
-      >
-        {groupedImages.map((group, index) => (
-          <SwiperSlide key={index} className={styles.slide}>
-            <div className={styles.slideContent}>
-              {group.map((image, i) => (
-                <div key={i} className={styles.imageContainer}>
-                  <Image src={image} alt={`Brand ${i}`} width={102} height={77} />
-                </div>
-              ))}
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    </>
   );
 }
