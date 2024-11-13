@@ -16,12 +16,11 @@ export default function Header() {
 
     return( 
         <div>
-
             <div className={styles.header}>
                 <div className={styles.menu}>
                     <div className={styles.loc_name}>
                         <div className={styles.loc_name_block}>
-                            <img src="/point.png" className={styles.loc_name_ico}></img>
+                            <img src="/kis_project_DANDA/point.png" className={styles.loc_name_ico}></img>
                             <div>
                                 <p className={styles.loc_name_text1}>
                                     г. Кокчетав, ул. Ж. Ташенова 129Б
@@ -33,7 +32,7 @@ export default function Header() {
                         </div>
 
                         <div className={styles.loc_name_block}>
-                            <img src="/messege.png" className={styles.loc_name_ico}></img>
+                            <img src="/kis_project_DANDA/messege.png" className={styles.loc_name_ico}></img>
                             <div>
                                 <p className={styles.loc_name_text1}>
                                     opt.sultan@mail.ru
@@ -57,13 +56,13 @@ export default function Header() {
                 </div>
 
                 <div className={styles.hat}>
-                    <img src="/logo.png" className={styles.hat_logo}></img>
+                    <img src="/kis_project_DANDA/logo.png" className={styles.hat_logo}></img>
 
                     <Button
                         text="Каталог"
                         onClick={() => alert("Кнопка в разработке")}
                         style={{ width: "180px", height: "59px" }}
-                        icon="/catalog.png"
+                        icon="/kis_project_DANDA/catalog.png"
                     />
 
                     <TextForm
@@ -72,7 +71,7 @@ export default function Header() {
                         onClick={() => alert("Поиск в разработке")}
                         style={{ width: "256px", height: "60px" }}
                         style_button={{ width: "40px", height: "40px" }}
-                        icon="/search.png"
+                        icon="/kis_project_DANDA/search.png"
                     />
 
                     <div className={styles.hat_phone_number}>
@@ -81,18 +80,18 @@ export default function Header() {
                             <p>время работы: 9:00-20:00</p>
                             <a className={styles.hat_phone_link2} href="">Заказать звонок</a>
                         </div>
-                        <img src="/phone_assistant.png"></img>
+                        <img src="/kis_project_DANDA/phone_assistant.png"></img>
                     </div>
 
                     <Button
                         text="Прайс лист"
                         onClick={() => alert("Кнопка в разработке")}
                         style={{ width: "200px", height: "59px" }}
-                        icon="/download.png"
+                        icon="/kis_project_DANDA/download.png"
                     />
 
                     <div className={styles.hat_bascket}>
-                        <img src="/bascket.png"></img>
+                        <img src="/kis_project_DANDA/bascket.png"></img>
                         <div className={styles.hat_bascket_text}>
                             <p className={styles.loc_name_text2}>Корзина</p>
                             <p className={styles.loc_name_text1}>12 478</p>
@@ -104,15 +103,15 @@ export default function Header() {
             <div className={styles.header_mobile}>
                 <div className={styles.bar_mobile}>
                     <button className={styles.button_mobile} onClick={toggleNavbar}>
-                        {isClick ? (<img src="/cross.png" />)
-                            : (<img src="/menu_icon.png" />)}
+                        {isClick ? (<img src="/kis_project_DANDA/cross.png" />)
+                            : (<img src="/kis_project_DANDA/menu_icon.png" />)}
                     </button>
 
                     {isClick && (
                         <div className={styles.sidebar_mobile}>
                             <div className={styles.info_mobile}>
                                 <div className={styles.loc_name_block_mobile}>
-                                    <img src="/point.png" className={styles.loc_name_ico_mobile}></img>
+                                    <img src="/kis_project_DANDA/point.png" className={styles.loc_name_ico_mobile}></img>
                                     <div>
                                         <p className={styles.loc_name_text1_mobile}>
                                             г. Кокчетав, ул. Ж. Ташенова 129Б
@@ -123,7 +122,7 @@ export default function Header() {
                                     </div>
                                 </div>
                                 <div className={styles.loc_name_block_mobile}>
-                                    <img src="/messege.png" className={styles.loc_name_ico_mobile}></img>
+                                    <img src="/kis_project_DANDA/messege.png" className={styles.loc_name_ico_mobile}></img>
                                     <div>
                                         <p className={styles.loc_name_text1_mobile}>
                                             opt.sultan@mail.ru
@@ -134,7 +133,7 @@ export default function Header() {
                                     </div>
                                 </div>
                                 <div className={styles.loc_name_block_mobile}>
-                                    <img src="/messege.png" className={styles.loc_name_ico_mobile}></img>
+                                    <img src="/kis_project_DANDA/messege.png" className={styles.loc_name_ico_mobile}></img>
                                     <div>
                                         <p className={styles.loc_name_text1_mobile}>
                                             Отдел продаж
@@ -149,7 +148,7 @@ export default function Header() {
                                 </div>
                                 <div className={styles.phone_button_mobile}>
                                     <div className={styles.figure_call_mobile}>
-                                        <img src="/phone.png" />
+                                        <img src="/kis_project_DANDA/phone.png" />
                                     </div>
                                     <a className={styles.hat_phone_link_mobile} href="">Заказать звонок</a>
                                 </div>
@@ -167,27 +166,27 @@ export default function Header() {
                                         text="Прайс лист"
                                         onClick={() => alert("Кнопка в разработке")}
                                         style={{ width: "100%", height: "72px" }}
-                                        icon="/download.png"
+                                        icon="/kis_project_DANDA/download.png"
                                     />
                                 </div>
                             </div>
                         </div>
                     )}
 
-                    <img src="/logo.png" className={styles.hat_logo_mobile}></img>
+                    <img src="/kis_project_DANDA/logo.png" className={styles.hat_logo_mobile}></img>
 
                     <button className={styles.basket_mobile} onClick={() => alert("Кнопка в разработке")}>
-                        <img src="/bascket.png"></img>
+                        <img src="/kis_project_DANDA/bascket.png"></img>
                     </button>
                 </div>
                 <div className={styles.catalog_search_mobile}>
                     <button className={styles.half_button_mobile} onClick={() => alert("Кнопка в разработке")}>
-                        <img src="/catalog_blue.png"></img>
+                        <img src="/kis_project_DANDA/catalog_blue.png"></img>
                         <p>Каталог</p>
                     </button>
                     <div className={styles.line_mobile}></div>
                     <button className={styles.half_button_mobile} onClick={() => alert("Кнопка в разработке")}>
-                        <img src="/search_blue.png"></img>
+                        <img src="/kis_project_DANDA/search_blue.png"></img>
                         <p>Поиск</p>
                     </button>
                 </div>
