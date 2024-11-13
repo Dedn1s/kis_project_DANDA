@@ -49,7 +49,7 @@ export default function Footer() {
     <div className={style.footer}>
     <div className={style.footer_text}>
     <div className={style.column}>
-    <img src="/logo_white.png" height="64px" alt="Логотип Султан" />
+    <img src="/kis_project_DANDA/logo_white.png" height="64px" alt="Логотип Султан" />
         <div className={style.footer_logo_section} ib="sultan">
             <ul className={style.list}>
                 {listItems_1}
@@ -60,7 +60,7 @@ export default function Footer() {
                     onClick={() => alert("Email в разработке")} 
                     style={{ width: "284px", height: "60px" }}
                     style_button={{width: "40px", height: "40px"}}
-                    icon="/arrow.png"
+                    icon="/kis_project_DANDA/arrow.png"
                 />
                 </li>
             </ul>
@@ -93,13 +93,13 @@ export default function Footer() {
                 <Button 
                     text="Прайс лист" 
                     onClick={() => alert("Кнопка в разработке")} 
-                    icon="/download.png"
+                    icon="/kis_project_DANDA/download.png"
                 />
                 </div>
             <div className={style.connection_mas}>
                 <li className={style.no_bullet}>Связь в мессенджерах</li>
-                <img src="/tg.png" height="40" alt="Telegram"></img>
-                <img src="/watsap.png" height="40" alt="WhatsApp"></img>
+                <img src="/kis_project_DANDA/tg.png" height="40" alt="Telegram"></img>
+                <img src="/kis_project_DANDA/watsap.png" height="40" alt="WhatsApp"></img>
             </div>
             </ul>
         </div>
@@ -116,8 +116,8 @@ export default function Footer() {
                 <li className={style.contact_email}><b>opt.sultan@mail.ru</b></li>
                 <li className={style.contact_available}>на связи в любое время</li>
                 <li className={style.contact_icons}>
-                    <img src="/visa.png" height="40" alt="Visa" />
-                    <img src="/master_card.png" height="40" alt="MasterCard" />
+                    <img src="/kis_project_DANDA/visa.png" height="40" alt="Visa" />
+                    <img src="/kis_project_DANDA/master_card.png" height="40" alt="MasterCard" />
                 </li>
             </ul>
         </div>
