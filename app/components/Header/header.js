@@ -7,6 +7,7 @@ import TextForm from "../sub_components/TextForm/TextForm"
 import { useState } from "react";
 
 export default function Header() {
+<<<<<<< HEAD
 
     const [isClick, setisClick] = useState(false);
 
