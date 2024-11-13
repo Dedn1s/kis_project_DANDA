@@ -13,8 +13,9 @@ import SaleItems from "./components/SaleItems/saleItems";
 
 
 const inter = Inter({ subsets: ['latin'] })
-const width = window.innerWidth
-
+//const width = window.innerWidth
+/*{width <= 768 ? (<Header_mobile/>)
+        :(<Header/>)}*/
 export default function Home() {
   return (
     <main className={inter.className}>
