@@ -50,7 +50,7 @@ export default function BrandSlider() {
             <SwiperSlide key={index} className={styles.slide}>
               <div className={styles.slideContent}>
                 <img
-                  src={`/brands/brand-${num}.png`}  
+                  src={`/kis_project_DANDA/brands/brand-${num}.png`}  
                   alt={`Brand ${num}`} 
                   style={{ maxHeight: '100%', maxWidth: 'auto' }}
                 />
