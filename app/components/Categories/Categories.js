@@ -2,11 +2,11 @@ import Link from 'next/link';
 import styles from "./Categories.modules.scss";
 
 const categories = [
-  { name: "Бытовая химия", image: "/chemist.png", link: "/household-chemicals" },
-  { name: "Косметика и гигиена", image: "/clean.png", link: "/cosmetics" },
-  { name: "Товары для дома", image: "/house.png", link: "/home-goods" },
-  { name: "Товары для детей и мам", image: "/mommys.png", link: "/kids-and-moms" },
-  { name: "Посуда", image: "/posuda.png", link: "/tableware" },
+  { name: "Бытовая химия", image: "/kis_project_DANDA/chemist.png", link: "/household-chemicals" },
+  { name: "Косметика и гигиена", image: "/kis_project_DANDA/clean.png", link: "/cosmetics" },
+  { name: "Товары для дома", image: "/kis_project_DANDA/house.png", link: "/home-goods" },
+  { name: "Товары для детей и мам", image: "/kis_project_DANDA/mommys.png", link: "/kids-and-moms" },
+  { name: "Посуда", image: "/kis_project_DANDA/posuda.png", link: "/tableware" },
 ];
 
 export default function CategoriesPage() {
