@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { appWithTranslation } from 'next-i18next';
 import "./globals.css";
 
 const inter = Inter({
@@ -23,3 +24,14 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <div className={inter.className}>
+      {/* <Layout> */}
+      <Component {...pageProps} />
+      {/*</Layout> */}
+    </div>
+  );
+};
+

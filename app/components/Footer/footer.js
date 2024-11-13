@@ -1,8 +1,10 @@
 "use client";
 
 import style from "./footer.module.scss"
+import { useTranslation } from 'next-i18next';
 import Button from "../sub_components/Button/Button"
 import TextForm from "../sub_components/TextForm/TextForm"
+import LanguageSwitcher from "../sub_components/Button/LanguageSwitcher"
 
 const column_1 = [
     'Компание "Султан" - снабжаем розничные магазины товарами"под ключ" в Кокчетве и Акмолинской области',
@@ -45,6 +47,7 @@ const listItems_5 = column_5.map((raw) => (
 
 
 export default function Footer() {
+    const { t } = useTranslation('common');
   return (
     <div className={style.footer}>
     <div className={style.footer_text}>
@@ -55,7 +58,7 @@ export default function Footer() {
                 {listItems_1}
                 <li>
                 <TextForm 
-                    text="Введите ваш email..." 
+                    text={t('Enter your email address')} 
                     type="email"
                     onClick={() => alert("Email в разработке")} 
                     style={{ width: "284px", height: "60px" }}
@@ -122,6 +125,7 @@ export default function Footer() {
             </ul>
         </div>
         </div>
+        <LanguageSwitcher/>
     </div>
     </div>
   );
