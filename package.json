@@ -1,7 +1,6 @@
 {
   "name": "project_danda",
   "version": "0.1.0",
-  "homepage": "https://Dedn1s.github.io/kis_project_DANDA",
   "private": true,
   "scripts": {
     "dev": "next dev",
