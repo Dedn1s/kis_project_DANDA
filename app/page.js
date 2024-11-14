@@ -1,33 +1,33 @@
-"use client";
+// app/page.js
+'use client';  // Директива для Client Component
 
-import Image from "next/image";
+import { useState, useEffect } from 'react';
 import { Inter } from "next/font/google";
-/*import styles from "./page.module.css";*/
-import Banner from "./components/Banner/Banner";
-import Header from "./components/Header/header";
-import Header_mobile from "./components/Header/Header_mobile";
-import CategoriesPage from "./components/Categories/Categories"
-import BrandSlider from "./components/Brends/Brand";
-import Footer from "./components/Footer/footer"
-import Contacts from "./components/contacts/contsct";
-import SaleItems from "./components/SaleItems/saleItems";
+import ProductCard from "./components/ProductCard"; // Импортируем компонент ProductCard
 
-
-const inter = Inter({ subsets: ['latin'] })
-const width = window.innerWidth
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    // Загрузка данных из public/products.json
+    fetch('/products.json')
+      .then((response) => response.json())
+      .then((data) => {
+        // Выбираем первый продукт или случайный
+        setProduct(data[0]);  // Или data[Math.floor(Math.random() * data.length)] для случайного
+      })
+      .catch((error) => {
+        console.error("Ошибка при загрузке данных:", error);
+      });
+  }, []);
+
+  if (!product) return <p>Загрузка...</p>;
+
   return (
     <main className={inter.className}>
-     {width <= 768 ? (<Header_mobile/>)
-        :(<Header/>)}
-     <Banner/>
-     <SaleItems/>
-     <CategoriesPage />
-     <BrandSlider />
-     <Contacts />
-     <Footer />
+      <ProductCard product={product} />
     </main>
-
   );
 }
