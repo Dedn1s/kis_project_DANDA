@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from "./Categories.modules.css";
+import styles from "./Categories.modules.scss";
 
 const categories = [
   { name: "Бытовая химия", image: "/chemist.png", link: "/household-chemicals" },

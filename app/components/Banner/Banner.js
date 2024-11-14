@@ -1,7 +1,7 @@
 'use client';
 
 import { Plus } from "lucide-react";
-import styles from "./Banner.module.css";
+import styles from "./Banner.module.scss";
 
 export default function Banner() {
   return (

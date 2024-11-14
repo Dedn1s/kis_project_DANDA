@@ -1,0 +1,222 @@
+$color_1: var(--primary-color);
+$color_2: var(--dark-gray);
+$color_3: var(--white);
+$color_4: var(--gray);
+$color_5: var(--black);
+$font-family_1: Inter, sans-serif;
+
+.saleItemsContainer {
+	width: 80%;
+	margin: 0 auto;
+	margin-left: auto;
+}
+.highlight {
+	color: $color_1;
+	font-weight: 700;
+}
+.title {
+	font-family: $font-family_1;
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 120%;
+	text-transform: uppercase;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+.card {
+	position: relative;
+	width: 312px;
+	height: 490px;
+	border-radius: 10px;
+	box-shadow: 0px 14px 39px -11px var(--gray);
+	background: var(--white);
+}
+.image {
+	border-radius: 10px 10px 0 0;
+	height: 200px;
+	object-fit: cover;
+	display: block;
+	margin: 0 auto;
+}
+.popularTag {
+	position: relative;
+	top: 30px;
+	left: 16px;
+	width: 96px;
+	height: 26px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--green);
+	border-radius: 5px;
+}
+.popularText {
+	color: $color_3;
+	font-family: $font-family_1;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 150%;
+	text-align: center;
+	text-transform: uppercase;
+}
+.vectorBytilka {
+	position: absolute;
+	width: 8px;
+	height: 16px;
+	left: 26px;
+	top: 240px;
+	background: var(--white);
+}
+.vectorBox {
+	position: absolute;
+	width: 20px;
+	height: 14px;
+	left: 24px;
+	top: 242px;
+	background: var(--white);
+}
+.volumeText {
+	position: absolute;
+	top: 240px;
+	left: 52px;
+	width: 56px;
+	height: 16px;
+	color: $color_4;
+	font-family: $font-family_1;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 130%;
+	letter-spacing: 0%;
+	text-align: left;
+}
+.productDescription {
+	position: absolute;
+	width: 282px;
+	height: 42px;
+	left: 24px;
+	top: 266px;
+	color: $color_5;
+	font-family: $font-family_1;
+	font-size: 16px;
+	line-height: 130%;
+	text-align: left;
+	.bold {
+		font-weight: 500;
+	}
+	.normal {
+		font-weight: 400;
+	}
+}
+.barcode {
+	position: absolute;
+	width: 74px;
+	height: 22px;
+	color: $color_4;
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: left;
+	top: 336px;
+	left: 24px;
+}
+.barcodeNumber {
+	position: absolute;
+	color: $color_5;
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: left;
+	top: 2px;
+	left: 80px;
+}
+.producer {
+	position: absolute;
+	color: $color_4;
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: left;
+	top: 358px;
+	left: 24px;
+}
+.producerName {
+	color: $color_5;
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-weight: 500;
+	margin-left: 6px;
+}
+.brand {
+	position: absolute;
+	color: $color_4;
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: left;
+	top: 378px;
+	left: 24px;
+}
+.brandName {
+	color: $color_5;
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-weight: 500;
+	margin-left: 5px;
+}
+.price {
+	position: absolute;
+	width: 70px;
+	height: 22px;
+	left: 24px;
+	top: 430px;
+	color: $color_5;
+	font-family: $font-family_1;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 130%;
+	letter-spacing: 0%;
+	text-align: left;
+}
+
+@media (max-width: 768px) {
+	.saleItemsContainer {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.title {
+		position: relative;
+		width: auto;
+		height: auto;
+		margin-top: 20px;
+		margin-left: 8px;
+		margin-right: 47px;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 120%;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	.grid {
+		display: flex;
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		width: 100%;
+		padding: 30px;
+	}
+	.grid::-webkit-scrollbar{
+			width: 0;
+		}
+
+	.card{
+		scroll-snap-align: center;
+	}
+
+	.productDescription{
+		width: 250px;
+	}
+}
