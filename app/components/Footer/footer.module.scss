@@ -33,6 +33,12 @@
     margin-bottom: 15px;
 }
 
+.list{
+    margin: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
 
 .price_button{
     background-color: var(--primary-color);
@@ -95,7 +101,7 @@
     .button{
         display: block;
         position: absolute;
-        margin-top: -128%;
+        margin-top: -34.5em;
         margin-left: 50%;
         }
     .button Button{
