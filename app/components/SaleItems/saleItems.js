@@ -62,12 +62,13 @@ export default function SaleItems() {
                             <div className={styles.price}>{product.price} ₸</div>
                             <Button 
                                 text="В корзину" 
-                                style={{ marginLeft: '180px', marginTop: '190px' }} 
+                                style={{ marginLeft: '180px', marginTop: '190px', marginRight: '20px', width: '150px' }} 
                             />
                         </div>
                     </div>
                 ))}
             </div>
+            
         </div>
     );
 }
