@@ -42,21 +42,21 @@ const ProductCard = ({ product }) => {
 
         <Button
           text="В корзину"
-          icon="/ProductDetails/korzina.svg" 
+          icon="/kis_project_DANDA/ProductDetails/korzina.svg" 
           onClick={() => alert("Добавлено в корзину")}
         />
 
         <div className={styles.actions}>
           <button className={styles.priceListButton}>
             <a href="/path/to/pricelist.pdf" download>
-              Прайс-лист <Image src="/ProductDetails/download.svg" alt="Download" width={11} height={12} />
+              Прайс-лист <Image src="/kis_project_DANDA/ProductDetails/download.svg" alt="Download" width={11} height={12} />
             </a>
           </button>
         </div>
 
         <div className={styles.actions}> 
             <button className={styles.shareButton}>
-                <Image src="/ProductDetails/share.svg" alt="Share" width={20} height={20} />
+                <Image src="/kis_project_DANDA/ProductDetails/share.svg" alt="Share" width={20} height={20} />
             </button>
         </div>
 
