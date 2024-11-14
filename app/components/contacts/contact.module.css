@@ -1,199 +1,161 @@
-.cont {
-    width: 80%;
-    margin: 0 auto;
-    position: relative; 
-}
 
-.cont img {
+.container {
+    position: relative;
+    margin: 0 auto 80px;
+    max-width: 1366px;
+    height: 600px;
+    overflow: hidden;
+    font-family: var(--font-inter);
+  }
+  
+  .mapImage {
     width: 100%;
-    margin-bottom: 40px;
-}
-
-.rectangle {
+    height: 100%;
+    object-fit: cover;
+    margin-left: 200px;
+    transform: scale(1.3);
+  }
+  
+  .overlay {
     position: absolute;
+    top: 40px;
+    left: 40px;
     width: 735px;
     height: 424px;
-    left: 30px; 
-    top: 30px; 
-    border-radius: 8px;
-    backdrop-filter: blur(30px);
+    padding: 48px;
     background: rgba(255, 255, 255, 0.3);
-    z-index: 10; 
-}
-
-.contact-title {
-    position: absolute;
-    width: 190px;
-    height: 48px;
-    left: 80px; 
-    top: 90px;  
-    color: rgb(63, 78, 101);
-    font-family: Inter, sans-serif;
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+  }
+  
+  .overlay h2 {
     font-size: 40px;
     font-weight: 500;
-    line-height: 120%;
-    text-align: left;
-    z-index: 20; 
-}
-
-.contact-subtitle {
-    position: absolute;
-    width: 292px;
-    height: 24px;
-    left: 80px;
-    top: 150px;
-    color: rgb(63, 78, 101);
-    font-family: Inter, sans-serif;
+    line-height: 48px;
+    color: var(--blue);
+    margin: 10px 0 20px;
+  }
+  
+  .overlay p {
     font-size: 20px;
     font-weight: 300;
-    line-height: 120%;
-    text-align: left;
-    z-index: 20; 
-}
-
-.contact-info {
-    position: absolute;
-    left: 80px; 
-    top: 220px;
-    display: flex; 
-    align-items: flex-start; 
-    z-index: 20; 
-}
-
-.address-block {
+    line-height: 24px;
+    color: rgb(63, 78, 101);
+	font-family: Inter, sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  .contactInfo {
+    display: flex;
+    margin-top: 24px;
+  }
+  
+  .iconText {
     display: flex;
     align-items: center;
-    margin-right: 60px; 
-}
-
-.location-icon {
-    width: 16px;
-    height: 24px;
-    margin-right: 8px; 
-}
-
-.address-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.address-label {
-    color: rgb(17, 17, 17);
-    font-family: Inter, sans-serif;
-    font-size: 14px;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .sale {
+    margin-left: 60px;
+  }
+  
+  .location-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  .iconText h3 {
     font-weight: 700;
-    line-height: 130.02%;
-    text-align: left;
-}
-
-.address-detail {
-    color: rgb(63, 78, 101);
-    width: 237px;
-}
-
-.sales-department {
-    display: flex;
-    flex-direction: column; 
-}
-
-.sales-title {
-    color: rgb(17, 17, 17);
-    font-family: Inter, sans-serif;
     font-size: 14px;
-    font-weight: 700;
-    line-height: 130.02%;
-    text-align: left;
-    margin-top: 8px;
-}
-
-.sales-phone,
-.sales-email {
-    color: rgb(63, 78, 101);
-    font-family: Inter, sans-serif;
-    font-size: 14px; 
-    font-weight: 300;
-    line-height: 120%;
-    text-align: left;
-}
-
-.dashed-line {
-    border: 1px dashed rgb(63, 78, 101);
-    opacity: 0.2;
-    width: 283px;
-    height: 0;
-    margin-top: 20px; 
-    align-self: flex-start; 
-    z-index: 20; 
-}
-
-.document-block {
-    position: absolute;
-    width: 267px; 
-    height: 62px; 
-    left: 80px;
-    top: 320px; 
-    display: flex;
-    align-items: center;
-    z-index: 20; 
-}
-
-.document-icon {
-    width: 12px;
-    height: 17px;
-    margin-right: 8px; 
-    margin-top: 50; 
-}
-
-.document-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.document-label {
-    width: 50px;
-    height: 18px;
-    color: rgb(17, 17, 17);
-    font-family: Inter, sans-serif;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: var(--black);
+  }
+  
+  .iconText p {
+    font-weight: 400;
     font-size: 14px;
-    font-weight: 700;
-    line-height: 130.02%;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-top: 4px;
-    white-space: nowrap;
-}
-
-.document-detail {
+    line-height: 18.2px;
     color: rgb(63, 78, 101);
-    width: 237px; 
-    height: auto; 
-}
+	font-family: Inter, sans-serif;
+  }
 
-@media (max-width: 768px) {
-    .cont img {
-        position: relative;
+
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      height: 600px;
+      margin: 0 auto 40px;
+    }
+  
+    .mapImage {
         width: 290px;
         height: 600px;
-        left: 15px;
-        border-radius: 10px;
-        object-fit: cover; 
-        object-position: center; 
+        
     }
+  
+    .overlay {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 90%;
+        height: 400px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        backdrop-filter: blur(12px);
+      }
 
-    .rectangle {
-        width: 270px; 
-        height: 319px; 
-        left: 25px; 
-        top: 15px; 
-        border-radius: 10px;
+    .location-icon {
+      display: none;
     }
-
-    .contact-title,
-    .contact-subtitle,
-    .contact-info,
-    .dashed-line,
-    .document-block {
+    .document-icon{
         display: none;
     }
-}
+  
+    .overlay h2 {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 24px;
+      margin: 0px 0 16px;
+    }
+  
+    .overlay p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 5px;
+    }
+  
+    .iconText {
+      gap: 16px;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+  
 
+    .iconText h3 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+     
+    }
+  
+    .iconText p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  
+    .sale {
+      margin-left: 0px;
+    }
+  }
+
+
+ 

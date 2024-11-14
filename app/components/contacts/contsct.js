@@ -3,37 +3,94 @@ import styles from "./contact.module.css";
 export default function Contacts() {
     return (
 
-        <div></div>
-        /*
-        <div className={styles.cont}>
-            <img src='/map.png' alt="Map" />
-            <div className={styles.rectangle}></div>
-            <div className={styles['contact-title']}>Контакты</div>
-            <div className={styles['contact-subtitle']}>Оптовый поставщик "Султан"</div>
-            <div className={styles['contact-info']}>
-                <div className={styles['address-block']}>
-                    <img src='/location.png' alt="Location" className={styles['location-icon']} />
-                    <div className={styles['address-text']}>
-                        <div className={styles['address-label']}>Адрес:</div>
-                        <div className={styles['address-detail']}>г. Кокчетав, ул. Ж. Ташенова 129Б (Рынок Восточный)</div>
+      /*
+            <div className={styles.container}>
+             <img src='/map.png' alt="Map" />
+        
+              <div className={styles.overlay}>
+                <h2>Контакты</h2>
+                <p className={styles.paragraph} >Оптовый поставщик «Султан»</p>
+        
+                <div className={styles.contactInfo}>
+                  <div className={styles.iconText}>
+                  <img src='/location.png' alt="Location" className={styles['location-icon']} /> 
+                    <div>
+                      <h3>Адрес:</h3>
+                      <p className={styles.paragraph} >
+                        г. Кокшетау, ул. Ж. Ташенова 129Б
+                        (Рынок Восточный)
+                      </p>
                     </div>
+                    <div className={styles.sale}>
+                      <h3>Отдел продаж:</h3>
+                      <p className={styles.paragraph} >
+                        +7 (777) 490-00-91
+             
+                        opt.sultan@mail.ru
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className={styles['sales-department']}>
-                    <div className={styles['sales-title']}>Отдел продаж:</div>
-                    <div className={styles['sales-phone']}>+7 (777) 490-00-91</div>
-                    <div className={styles['sales-email']}>opt.sultan@mail.ru</div>
+        
+                <div className={styles.iconText}>
+                <img src='/document.png' alt="Location" className={styles['document-icon']} />
+                  <div>
+                    <h3>Данные налогоплательщика:</h3>
+                    <p className={styles.paragraph} >
+                      ИП Катран Д.С.
+                      <br />
+                      ИНН: 860113450858
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        */
+<div className={styles.container}>
+    <img src='/map.png' alt="Map" className={styles.mapImage} />
+
+    <div className={styles.overlay}>
+        <header>
+            <h2>Контакты</h2>
+            <p className={styles.paragraph}>Оптовый поставщик «Султан»</p>
+        </header>
+
+        <div className={styles.contactInfo}>
+            <div className={styles.iconText}>
+                <img src='/location.png' alt="Location" className={styles['location-icon']} />
+                <div className={styles.details}>
+                    <h3>Адрес:</h3>
+                    <p className={styles.paragraph}>
+                        г. Кокшетау, ул. Ж. Ташенова 129Б
+                        (Рынок Восточный)
+                    </p>
+                </div>
+                <div className={styles.sale}>
+                    <h3>Отдел продаж:</h3>
+                    <p className={styles.paragraph}>
+                        +7 (777) 490-00-91
+                        <br />
+                        opt.sultan@mail.ru
+                    </p>
                 </div>
             </div>
-            <div className={styles['dashed-line']}></div> 
-            <div className={styles['document-block']}>
-                    <img src='/document.png' alt="Location" className={styles['document-icon']} />
-                    <div className={styles['document-text']}>
-                        <div className={styles['document-label']}>Данные налогоплательщика:</div>
-                        <div className={styles['document-detail']}>ИП Катран Д.С.<br />ИИН: 860113450858 
-                        </div>
-                    </div>
-                </div>
         </div>
-        */
-    );
+
+        <div className={styles.iconText}>
+            <img src='/document.png' alt="Document" className={styles['document-icon']} />
+            <div className={styles.details}>
+                <h3>Данные налогоплательщика:</h3>
+                <p className={styles.paragraph}>
+                    ИП Катран Д.С.
+                    <br />
+                    ИНН: 860113450858
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    )
+        
 }
