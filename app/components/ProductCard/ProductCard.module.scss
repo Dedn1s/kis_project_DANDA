@@ -215,62 +215,10 @@
     width: 40%;
     border-top: 1px dashed rgba(63, 78, 101, 0.3);
   }
-  
-  
-  
-  
-  
-  @media (max-width: 1280px) {
-    .container {
-      width: 95%;
-    }
-  
-    .imageSection,
-    .infoSection {
-      max-width: 100%;
-      padding: 10px;
-    }
-  
-    .productTitle {
-      font-size: 28px;
-      line-height: 42px;
-    }
-  
-    .priceContainer {
-      gap: 20px;
-    }
-  
-    .descriptionTitle {
-      font-size: 15px;
-      width: 100px;
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .container {
-      width: 90%;
-    }
-  
-    .productTitle {
-      font-size: 26px;
-      line-height: 40px;
-    }
-  
-    .priceListButton {
-      width: 50%;
-      padding: 15px 25px;
-      font-size: 13px;
-    }
-  
-    .descriptionTitle {
-      font-size: 14px;
-      line-height: 22px;
-    }
-  }
-  
+
   @media (max-width: 768px) {
     .container {
-      width: 85%;
+      width: 100%;
       margin: 0 auto 60px;
     }
     .productCard {
@@ -307,75 +255,3 @@
       width: 100%;
     }
   }
-  
-  @media (max-width: 480px) {
-    .container {
-      width: 90%;
-      margin: 0 auto 40px;
-    }
-  
-    .priceContainer {
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: flex-start;
-    }
-  
-    .productTitle {
-      font-size: 14px;
-      line-height: 24px;
-    }
-  
-    .productPrice {
-      font-size: 26px;
-      line-height: 36px;
-    }
-  
-    .shareButton1 {
-      display: block;
-      padding: 10px 8px;
-      margin: 0 auto;
-    }
-  
-    .priceContainer > * {
-      flex: 0 0 auto;
-    }
-  
-    .priceContainer > *:nth-child(1),
-    .priceContainer > *:nth-child(2) {
-      width: calc(50% - 50px);
-    }
-  
-    .priceContainer > *:nth-child(3),
-    .priceContainer > *:nth-child(4) {
-      width: auto;
-    }
-  
-    .actions {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .shareButton {
-      display: none;
-    }
-  
-    .priceListButton,
-    .freeShipping {
-      padding: 10px 15px;
-      font-size: 12px;
-    }
-  
-    .description {
-      margin-top: 20px;
-    }
-  
-    .divider {
-      margin: 15px 0;
-    }
-  
-    
-  }
-  
