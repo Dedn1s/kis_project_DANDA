@@ -4,12 +4,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import Button from "../sub_components/Button/Button";
-import {promotionSlide, partnerSlide} from "../Carousel/Constants.js";
-import styles from "../Carousel/Carousel.css";
+import {firstslide, secondslide} from "../Carousel/Constants.js";
+import styles from "./Carousel.module.css";
 
-const sliderData = [promotionSlide, partnerSlide];
+const sliderData = [firstslide, secondslide];
 
-export default function PromotionSwiper() {
+export default function Carousel() {
   return (
     <section className={styles.container}>
       <Swiper
@@ -34,9 +34,10 @@ export default function PromotionSwiper() {
                 <h2 className={styles.slideTitle}>{slide.title}</h2>
                 <p className={styles.slideDescription}>{slide.description}</p>
                 <Button
-                  label={slide.buttonText}
-                  size="lg"
+                  text={slide.buttonText}
+                  style={{width:"180px", height: "60px"}}
                   href={slide.link}
+                  onClick={() => alert("Кнопка в разработке")}
                 />
               </div>
             </div>
