@@ -5,7 +5,7 @@ export default function Contacts() {
 
 
 <div className={styles.container}>
-    <img src='/map.png' alt="Map" className={styles.mapImage} />
+    <img src='/kis_project_DANDA/map.png' alt="Map" className={styles.mapImage} />
 
     <div className={styles.overlay}>
         <header>
@@ -15,7 +15,7 @@ export default function Contacts() {
 
         <div className={styles.contactInfo}>
             <div className={styles.iconText}>
-                <img src='/location.png' alt="Location" className={styles['location-icon']} />
+                <img src='/kis_project_DANDA/location.png' alt="Location" className={styles['location-icon']} />
                 <div className={styles.details}>
                     <h3>Адрес:</h3>
                     <p className={styles.paragraph}>
@@ -35,7 +35,7 @@ export default function Contacts() {
         </div>
 
         <div className={styles.iconText}>
-            <img src='/document.png' alt="Document" className={styles['document-icon']} />
+            <img src='/kis_project_DANDA/document.png' alt="Document" className={styles['document-icon']} />
             <div className={styles.details}>
                 <h3>Данные налогоплательщика:</h3>
                 <p className={styles.paragraph}>
