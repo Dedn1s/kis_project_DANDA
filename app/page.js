@@ -13,7 +13,6 @@ import SaleItems from "./components/SaleItems/saleItems";
 
 
 const inter = Inter({ subsets: ['latin'] })
-const width = window.innerWidth
 
 export default function Home() {
   return (
