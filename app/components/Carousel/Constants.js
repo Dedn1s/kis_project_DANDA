@@ -1,5 +1,5 @@
 export const firstslide = {
-    imageSrc: '/girl_carousel.png',
+    imageSrc: '/kis_project_DANDA/girl_carousel.png',
     duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 04/09/22',
     title: 'Бесплатный клининг',
     description:
@@ -10,7 +10,7 @@ export const firstslide = {
   };
   
   export const secondslide = {
-    imageSrc: '/ryan_mm.png',
+    imageSrc: '/kis_project_DANDA/ryan_mm.png',
     duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 04/09/24',
     title: 'М-м-м...',
     description:
