@@ -60,9 +60,10 @@ export default function SaleItems() {
 
                         <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
                             <div className={styles.price}>{product.price} ₸</div>
-                            <Button 
-                                text="В корзину" 
-                                style={{ marginLeft: '180px', marginTop: '190px', marginRight: '20px', width: '150px' }} 
+                            <Button
+                                text="В корзину"
+                                textColor="white"
+                                style={{ width: "200px", height: "44px", marginLeft: "160px", marginTop: "184px", marginRight: "20px" }}
                             />
                         </div>
                     </div>

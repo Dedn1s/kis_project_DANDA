@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./header.module.scss";
 import Button from "../sub_components/Button/Button";
 import TextForm from "../sub_components/TextForm/TextForm"
@@ -59,7 +57,8 @@ export default function Header() {
                     <img src="/kis_project_DANDA/logo.png" className={styles.hat_logo}></img>
 
                     <Button
-                        text="Каталог"
+                        text="Каталог" 
+                        textColor="white"
                         onClick={() => alert("Кнопка в разработке")}
                         style={{ width: "180px", height: "59px" }}
                         icon="/kis_project_DANDA/catalog.png"
@@ -85,6 +84,7 @@ export default function Header() {
 
                     <Button
                         text="Прайс лист"
+                        textColor="white"
                         onClick={() => alert("Кнопка в разработке")}
                         style={{ width: "200px", height: "59px" }}
                         icon="/kis_project_DANDA/download.png"
@@ -164,6 +164,7 @@ export default function Header() {
                                 <div className={styles.price_list_mobile}>
                                     <Button
                                         text="Прайс лист"
+                                        textColor="white"
                                         onClick={() => alert("Кнопка в разработке")}
                                         style={{ width: "100%", height: "72px" }}
                                         icon="/kis_project_DANDA/download.png"

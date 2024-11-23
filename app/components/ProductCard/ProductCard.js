@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import Button from "../sub_components/Button/Button";
@@ -28,25 +26,44 @@ const ProductCard = ({ product }) => {
         <p className={styles.inStock}>В наличии</p>
         <h2 className={styles.productTitle}>{product.nameRu}</h2>
         <p className={styles.productVolume}>{product.size} {product.sizeType}</p>
-        <p className={styles.productPrice}>{product.price} ₸</p>
 
-        <div className={styles.quantityContainer}>
-          <button className={styles.quantityButton} onClick={decrementQuantity}>
-            -
-          </button>
-          <span className={styles.quantity}>{quantity}</span>
-          <button className={styles.quantityButton} onClick={incrementQuantity}>
-            +
-          </button>
+        <div className={styles.priceAndActionsContainer}>
+          <p className={styles.productPrice}>{product.price} ₸</p>
+
+          <div className={styles.quantityContainer}>
+            <button className={styles.quantityButton} onClick={decrementQuantity}>
+              -
+            </button>
+            <span className={styles.quantity}>{quantity}</span>
+            <button className={styles.quantityButton} onClick={incrementQuantity}>
+              +
+            </button>
+          </div>
+
+          <Button
+            text="В корзину"
+            textColor="white"
+            icon="/ProductDetails/korzina.svg"
+            style={{ width: "180px", height: "59px", marginLeft: "40px" }}
+            onClick={() => alert("Добавлено в корзину")}
+          />
         </div>
 
         <Button
           text="В корзину"
-          icon="/kis_project_DANDA/ProductDetails/korzina.svg" 
+          icon="/kis_project_DANDA/ProductDetails/korzina.svg"
           onClick={() => alert("Добавлено в корзину")}
-        />
+        /> <div className={styles.promotionContainer}>
+          <button className={styles.shareButton}>
+            <Image src="/ProductDetails/share.svg" alt="Share" width={20} height={20} />
+          </button>
 
-        <div className={styles.actions}>
+          <div className={styles.promotionBox}>
+            <p className={styles.promotionText}>
+              При покупке от <span>10 000 ₸</span> бесплатная доставка по Кокчетаву и области
+            </p>
+          </div>
+
           <button className={styles.priceListButton}>
             <a href="/path/to/pricelist.pdf" download>
               Прайс-лист <Image src="/kis_project_DANDA/ProductDetails/download.svg" alt="Download" width={11} height={12} />
@@ -59,10 +76,6 @@ const ProductCard = ({ product }) => {
                 <Image src="/kis_project_DANDA/ProductDetails/share.svg" alt="Share" width={20} height={20} />
             </button>
         </div>
-
-        <p className={styles.freeShipping}>
-            При покупке от <span>10 000 ₸</span> бесплатная доставка по Кокчетаву и области
-        </p>
 
         <div className={styles.characteristicsList}>
           <p>
@@ -89,8 +102,8 @@ const ProductCard = ({ product }) => {
             </p>
           )}
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

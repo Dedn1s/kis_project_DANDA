@@ -1,4 +1,4 @@
-$color_1: #ffffff;
+$color_1: var(white);
 
 .button {
 	cursor: pointer;
@@ -11,30 +11,37 @@ $color_1: #ffffff;
 	color: $color_1;
 	font-weight: 700;
 	border: none;
+	text-decoration: none; 
 	transition: all 0.5s;
+
 	&:hover {
-		background: rgb(253, 215, 139);
-		box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+		background: var(--primary-color);
+		box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+			rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+			rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 	}
-	&:active {
-		background: rgb(227, 154, 7);
-	}
+
+	&:active,
 	&:focus {
-		background: rgb(227, 154, 7);
+		background: var(--dark-yellow);
 	}
 }
+
 .button_small {
 	font-size: 14px;
 	padding: 8px 16px;
 }
+
 .button_medium {
 	font-size: 18px;
 	padding: 10px 20px;
 }
+
 .button_large {
 	font-size: 22px;
 	padding: 12px 24px;
 }
+
 .icon {
 	margin-left: 8px;
 }
