@@ -5,7 +5,7 @@ export default function Button({ text, type, onClick, href, style, style_button,
         if (onClick) {
             onClick();
         } else {
-            alert("Форма в разработке"); // Если нет onClick, выдает сообщение
+            alert("Форма в разработке"); 
         }
     };
 

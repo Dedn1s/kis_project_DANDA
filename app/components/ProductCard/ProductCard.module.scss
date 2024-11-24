@@ -12,6 +12,38 @@
     overflow: hidden;
   } 
 
+  .inStock {
+    margin: 0 0 10px;
+    width: 120px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--green);
+  }
+
+  .outOfStock {
+    margin: 0 0 10px;
+    width: 120px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--gray); 
+  }
+
+  .sizeInfo {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    color: var(--gray);
+    margin-top: 10px;
+  }
+  
+  .vectorBytilka, .vectorBox {
+    width: 10px; 
+    height: auto;
+  }
+  
+
   .promotionContainer {
   display: flex;
   align-items: center;
@@ -26,28 +58,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 316px; 
-  height: 77px; 
+  width: 400px; 
+  height: 76px; 
   border-radius: 10px;
-  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
-  background: rgb(255, 255, 255);
+  box-shadow: 0px 14px 39px -11px var(--gray);
+  background: var(--white);
   text-align: center;
   font-size: 14px;
   line-height: 18px;
   color: var(--blue);
 }
 
+.ButtonBox {
+  width: 76px; 
+  height: 76px; 
+  border-radius: 10px;
+  box-shadow: 0px 14px 39px -11px var(--gray);
+}
 
 .shareButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 7px;
-  height: 77px;
-  border: none;
-  border-radius: 10px;
-  background: rgb(255, 255, 255);
-  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+  width: 16px;
+  height: 76px;
+  margin-left: 8px;
   cursor: pointer;
 }
 
@@ -57,7 +89,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  color: var(--blue);
+  color: var(--gray);
 }
 
 .promotionText span {
@@ -69,24 +101,30 @@
   align-items: center;
   justify-content: center;
   width: 186px;
-  height: 77px;
+  height: 78px;
   padding: 10px;
   border: none;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
-  box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+  box-shadow: 0px 14px 39px -11px var(--gray);
   font-size: 14px;
   font-weight: 700;
-  color: var(--blue);
+  background-color: var(--white);
   text-decoration: none;
   cursor: pointer;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    text-decoration: none;
+    color: var(--gray);
+  }
 }
 
-.priceListButton a {
-  text-decoration: none;
-  color: var(--blue);
+.downloadIcon {
+  width: 12px;
+  height: 12px;
 }
-
   
   .imageSection {
     display: flex;
@@ -101,7 +139,7 @@
   .productImage {
     width: auto;
     height: 100%;
-    max-height: 500px; 
+    max-height: 600px; 
     object-fit: contain;
   }
   
@@ -110,35 +148,35 @@
     max-width: 50%;
     padding: 20px;
   }
-  
-  .inStock {
-    margin: 0 0 10px;
-    width: 120px;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 18px;
-    color: var(--green);
+
+  .productHeader {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
   }
   
   .productTitle {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 45px;
-    color: var(--black);
+    font-weight: 400; 
+    font-size: 24px; 
+    line-height: 32px; 
+    color: var(--black); 
   }
   
   .productBrand {
-    font-weight: 800;
+    font-weight: 700; 
+    font-size: 24px;
+    line-height: 32px; 
+    color: var(--black); 
   }
   
   .productVolume {
     display: flex;
     align-items: center;
     gap: 4px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-size: 12px;
     font-weight: 400;
-    color: var(--blue);
+    color: var(--gray);
   }
   
   .volumeType {
@@ -157,6 +195,7 @@
     display: flex; 
     align-items: center; 
     gap: 40px; 
+    margin-top: -14px;
   }
   
   .productPrice {
@@ -166,7 +205,7 @@
   .productPrice {
     font-size: 30px;
     font-weight: 800;
-    line-height: 39px;
+    line-height: 40px;
     color: var(--black);
   }
   
@@ -182,17 +221,17 @@
     align-items: center;
     justify-content: center;
     width: 34px;
-    height: 23px;
+    height: 24px;
     border-radius: 40px;
     border: 0px;
     font-size: 12px;
-    background-color: rgba(255, 198, 80, 0.3);
+    background-color: var(--brown);
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
   }
   
   .quantityButton:hover {
-    background-color: rgba(255, 198, 80, 1);
+    background-color: var(darw-yellow);
   }
   
   .quantity {
@@ -203,7 +242,7 @@
   
   .actions {
     display: flex;
-    gap: 15px;
+    gap: 14px;
     margin-top: 10px;
     width: 100%;
   }
@@ -212,8 +251,8 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    color: var(--blue);
-    padding: 20px 35px;
+    color: var(--gray);
+    padding: 20px 34px;
   }
   
   .freeShipping span {
@@ -222,8 +261,7 @@
     line-height: 18px;
   }
   
-  .shareButton,
-  .priceListButton {
+  .shareButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,24 +271,22 @@
     width: 40%;
     font-size: 14px;
     font-weight: 700;
-    line-height: 17px;
-    color: var(--blue);
-    background: rgba(255, 255, 255, 0);
+    line-height: 18px;
+    color: var(--gray);
+    background: var(--white);
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
   }
   
-  .shareButton:hover,
-  .priceListButton:hover {
+  .shareButton:hover {
     opacity: 0.8;
   }
   
   .characteristicsList {
     font-size: 14px;
     font-weight: 300;
-    line-height: 21px;
-    color: var(--blue);
+    line-height: 22px;
     margin-top: 36px;
   }
   
@@ -280,7 +316,7 @@
   }
   
   .descriptionTitle:hover {
-    color: var(--yellow-hover);
+    color: var(dark-yellow);
   }
   
   .descriptionTitle span {
@@ -290,19 +326,83 @@
   }
   
   .descriptionText {
-    margin-top: 15px;
+    margin-top: 14px;
     overflow: hidden;
     font-size: 12px;
     font-weight: 300;
     line-height: 18px;
-    color: var(--blue);
+    color: var(--gray);
   }
   
   .divider {
     margin: 20px 0;
     width: 40%;
-    border-top: 1px dashed rgba(63, 78, 101, 0.3);
+    border-top: 1px dashed var(--dark-gray);
   }
+
+  .shareMenu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: var(--dark-white);
+    border: 1px solid var(--dark-white);
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 4px 6px var(--black);
+    z-index: 1000;
+  }
+  
+  .copyLinkButton {
+    background: var(--dark-white);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .copyLinkButton:hover {
+    background: var(--dark-white);
+  }
+  
+  .copyLinkButton:active {
+    background: var(--dark-white);
+  }
+
+  .linkCopied {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: var(--green);
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px var(--black);
+    animation: fadeInOut 2s ease-in-out;
+    z-index: 1000;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  
+  
 
   @media (max-width: 768px) {
     .container {
