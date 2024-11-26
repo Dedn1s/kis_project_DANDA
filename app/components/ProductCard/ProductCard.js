@@ -109,7 +109,7 @@ const ProductCard = ({ product }) => {
             text="В корзину"
             textColor="white"
             icon="/ProductDetails/korzina.svg"
-            style={{ width: "180px", height: "60px", marginLeft: "40px" }}
+            style={{ width: "260px", height: "60px" }}
             onClick={addToCart}
             disabled={product.amount === 0}
           />
