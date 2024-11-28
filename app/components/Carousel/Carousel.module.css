@@ -70,7 +70,7 @@
   
   .container :global(.swiper-button-next),
   .container :global(.swiper-button-prev) {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 50%;
     width: 67px;
     height: 67px;
@@ -108,7 +108,7 @@
   
   .container :global(.swiper-button-next:hover::after),
   .container :global(.swiper-button-prev:hover::after) {
-    color: white;
+    color: var(--white);
   }
   
   .container :global(.swiper-pagination) {
@@ -118,7 +118,7 @@
   }
   
   .container :global(.swiper-pagination-bullet) {
-    background-color: gray;
+    background-color: var(--gray);
     width: 16px;
     height: 7px;
     border-radius: 4px;

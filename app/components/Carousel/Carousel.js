@@ -35,6 +35,7 @@ export default function Carousel() {
                 <p className={styles.slideDescription}>{slide.description}</p>
                 <Button
                   text={slide.buttonText}
+                  textColor="white"
                   href={slide.link}
                   onClick={() => alert("Кнопка в разработке")}
                 />
