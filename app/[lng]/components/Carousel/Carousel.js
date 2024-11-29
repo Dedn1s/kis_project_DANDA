@@ -4,7 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import Button from "../sub_components/Button/Button";
-import {firstslide, secondslide} from "../Carousel/Constants.js";
+import {firstslide, secondslide} from "./Constants.js";
 import styles from "./Carousel.module.css";
 
 const sliderData = [firstslide, secondslide];
