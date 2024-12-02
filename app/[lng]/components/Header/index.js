@@ -4,6 +4,21 @@ import Button from "../sub_components/Button/Button";
 import TextForm from "../sub_components/TextForm/TextForm"
 import Image from 'next/image'
 
+//импорт фотографий (теперь делаем только так)
+import point_img from "@/public/point.png"
+import messege_img from "@/public/messege.png"
+import logo_img from "@/public/logo.png"
+import catalog_img from "@/public/catalog.png"
+import download_img from "@/public/download.png"; 
+import search_img from "@/public/search.png";
+import phone_assistant_img from "@/public/phone_assistant.png";
+import bascket_img from "@/public/bascket.png"
+import cross_img from "@/public/cross.png"
+import menu_icon_img from "@/public/menu_icon.png"
+import phone_img from "@/public/phone.png";
+import search_blue_img from "@/public/search_blue.png"
+import catalog_blue_img from "@/public/catalog_blue.png"
+
 import { useState } from "react";
 import { useTranslation } from '../../../i18n/client'
 
@@ -25,10 +40,11 @@ export const Header = ({ lng }) => {
                     <div className={styles.loc_name}>
                         <div className={styles.loc_name_block}>
                             <Image 
-                                src = "/point.png"
+                                src = {point_img}
                                 className={styles.loc_name_ico}
                                 height = {16}
-                                width = {16}></Image>
+                                width = {16}>
+                            </Image>
                             <div>
                                 <p className={styles.loc_name_text1}>
                                     {t('adress_1')}
@@ -40,7 +56,12 @@ export const Header = ({ lng }) => {
                         </div>
 
                         <div className={styles.loc_name_block}>
-                            <img src="/messege.png" className={styles.loc_name_ico}></img>
+                            <Image 
+                                src = {messege_img}
+                                className={styles.loc_name_ico}
+                                height = {16}
+                                width = {16}>
+                            </Image>
                             <div>
                                 <p className={styles.loc_name_text1}>
                                     opt.sultan@mail.ru
@@ -64,14 +85,20 @@ export const Header = ({ lng }) => {
                 </div>
 
                 <div className={styles.hat}>
-                    <img src="/logo.png" className={styles.hat_logo}></img>
+                    <Image 
+                        src = {logo_img}
+                        className={styles.hat_logo}
+                        height = {68}
+                        width = {156}>
+                    </Image>
 
                     <Button
                         text={t('cat')} 
                         textColor="white"
                         href=""
                         style={{ width: "180px", height: "59px" }}
-                        icon="/catalog.png"
+                        icon= {catalog_img}
+                        icon_style={{width: "30px", height: "30px"}}
                     />
 
                     <TextForm
@@ -80,7 +107,8 @@ export const Header = ({ lng }) => {
                         onClick={() => alert("Поиск в разработке")}
                         style={{ width: "256px", height: "60px" }}
                         style_button={{ width: "40px", height: "40px" }}
-                        icon="/search.png"
+                        icon= {search_img}
+                        style_icon={{width:"25px", height:"25px"}}
                     />
 
                     <div className={styles.hat_phone_number}>
@@ -89,19 +117,28 @@ export const Header = ({ lng }) => {
                             <p>{t('timework')}: 9:00-20:00</p>
                             <a className={styles.hat_phone_link2} href="">{t('wantcall')}</a>
                         </div>
-                        <img src="/phone_assistant.png"></img>
+                        <Image 
+                            src = {phone_assistant_img}
+                            className={styles.hat_phone_number_img}
+                            height = {92}>
+                        </Image>
                     </div>
 
                     <Button
                         text={t('pricelist')}
                         textColor="white"
                         onClick={() => alert("Кнопка в разработке")}
-                        style={{ width: "200px", height: "59px" }}
-                        icon="/download.png"
+                        style={{ width: "180px", height: "59px" }}
+                        icon= {download_img}
+                        icon_style={{width: "30px", height: "30px"}}
                     />
 
                     <div className={styles.hat_bascket}>
-                        <img src="/bascket.png"></img>
+                    	<Image 
+                            src = {bascket_img}
+                            className={styles.hat_bascket_img}
+                            height = {44}>
+                        </Image>
                         <div className={styles.hat_bascket_text}>
                             <p className={styles.loc_name_text2}>{t('basket')}</p>
                             <p className={styles.loc_name_text1}>12 478</p>
@@ -113,15 +150,30 @@ export const Header = ({ lng }) => {
             <div className={styles.header_mobile}>
                 <div className={styles.bar_mobile}>
                     <button className={styles.button_mobile} onClick={toggleNavbar}>
-                        {isClick ? (<img src="/cross.png" />)
-                            : (<img src="/menu_icon.png" />)}
+                        {isClick ? (
+                            <Image 
+                                src = {cross_img}
+                                className={styles.button_mobile_img}
+                                height = {10}>
+                            </Image>
+                        ) : (
+                            <Image 
+                                src = {menu_icon_img}
+                                className={styles.button_mobile_img}
+                                height = {10}>
+                            </Image>)}
                     </button>
 
                     {isClick && (
                         <div className={styles.sidebar_mobile}>
                             <div className={styles.info_mobile}>
                                 <div className={styles.loc_name_block_mobile}>
-                                    <img src="/point.png" className={styles.loc_name_ico_mobile}></img>
+                                    <Image 
+                                        src = {point_img}
+                                        className={styles.loc_name_ico_mobile}
+                                        height = {16}
+                                        width  = {16}>
+                                    </Image>
                                     <div>
                                         <p className={styles.loc_name_text1_mobile}>
                                             {t('adress_1')}
@@ -132,7 +184,12 @@ export const Header = ({ lng }) => {
                                     </div>
                                 </div>
                                 <div className={styles.loc_name_block_mobile}>
-                                    <img src="/messege.png" className={styles.loc_name_ico_mobile}></img>
+                                    <Image 
+                                        src = {messege_img}
+                                        className={styles.loc_name_ico_mobile}
+                                        height = {16}
+                                        width  = {16}>
+                                    </Image>
                                     <div>
                                         <p className={styles.loc_name_text1_mobile}>
                                             opt.sultan@mail.ru
@@ -143,7 +200,12 @@ export const Header = ({ lng }) => {
                                     </div>
                                 </div>
                                 <div className={styles.loc_name_block_mobile}>
-                                    <img src="/messege.png" className={styles.loc_name_ico_mobile}></img>
+                                    <Image 
+                                        src = {messege_img}
+                                        className={styles.loc_name_ico_mobile}
+                                        height = {16}
+                                        width  = {16}>
+                                    </Image>
                                     <div>
                                         <p className={styles.loc_name_text1_mobile}>
                                             {t('salegroup')}
@@ -158,7 +220,11 @@ export const Header = ({ lng }) => {
                                 </div>
                                 <div className={styles.phone_button_mobile}>
                                     <div className={styles.figure_call_mobile}>
-                                        <img src="/phone.png" />
+                                        <Image 
+                                            src = {phone_img}
+                                            className={styles.figure_call_mobile_img}
+                                            height = {10}>
+                                        </Image>
                                     </div>
                                     <a className={styles.hat_phone_link_mobile} href="">{t('wantcall')}</a>
                                 </div>
@@ -177,27 +243,46 @@ export const Header = ({ lng }) => {
                                         textColor="white"
                                         onClick={() => alert("Кнопка в разработке")}
                                         style={{ width: "100%", height: "72px" }}
-                                        icon="/download.png"
+                                        icon = {download_img}
+                                        icon_style={{width: "30px", height: "30px"}}
                                     />
                                 </div>
                             </div>
                         </div>
                     )}
 
-                    <img src="/logo.png" className={styles.hat_logo_mobile}></img>
+                    <Image 
+                        src = {logo_img}
+                        className={styles.hat_logo_mobile}
+                        height = {44}
+                        width  = {100}>
+                    </Image>
+                    
 
                     <button className={styles.basket_mobile} onClick={() => alert("Кнопка в разработке")}>
-                        <img src="/bascket.png"></img>
+                        <Image 
+                            src = {bascket_img}
+                            className={styles.basket_mobile_img}
+                            height = {32}>
+                        </Image>
                     </button>
                 </div>
                 <div className={styles.catalog_search_mobile}>
                     <button className={styles.half_button_mobile} onClick={() => alert("Кнопка в разработке")}>
-                        <img src="/catalog_blue.png"></img>
+                        <Image 
+                            src = {catalog_blue_img}
+                            className={styles.half_button_mobile_img}
+                            height = {16}>
+                        </Image>
                         <p>{t('cat')}</p>
                     </button>
                     <div className={styles.line_mobile}></div>
                     <button className={styles.half_button_mobile} onClick={() => alert("Кнопка в разработке")}>
-                        <img src="/search_blue.png"></img>
+                        <Image 
+                            src = {search_blue_img}
+                            className={styles.half_button_mobile_img}
+                            height = {16}>
+                        </Image>
                         <p>{t('search')}</p>
                     </button>
                 </div>

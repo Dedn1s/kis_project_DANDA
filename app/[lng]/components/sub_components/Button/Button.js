@@ -1,11 +1,13 @@
 import Link from "next/link";
 import styles from "./Button.module.scss";
+import Image from "next/image";
 
 export default function Button({
     text,
     href,
     style,
     icon,
+    icon_style,
     size = "medium",
     textColor = "inherit", 
 }) {
@@ -22,7 +24,10 @@ export default function Button({
         return (
             <Link href={href} className={buttonClass} style={customStyle}>
                 {text}
-                {icon && <img src={icon} alt="Иконка" className={styles.icon} />}
+                {icon && <Image
+                        src = {icon}
+                        className={styles.icon}
+                        style = {icon_style}></Image>}
             </Link>
         );
     }
@@ -34,7 +39,10 @@ export default function Button({
             aria-disabled="true"
         >
             {text}
-            {icon && <img src={icon} alt="Иконка" className={styles.icon} />}
+            {icon && <Image
+                        src = {icon}
+                        className={styles.icon}
+                        style = {icon_style}></Image>}
         </button>
     );
 }

@@ -12,6 +12,7 @@
     --green: rgb(31, 216, 93);
 }
 
+
 body {
     font-family: 'Inter', sans-serif; 
 }
@@ -31,5 +32,3 @@ body {
         margin: 0 auto;
     }
 }
-
-

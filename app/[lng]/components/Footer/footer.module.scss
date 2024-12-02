@@ -37,8 +37,12 @@
     list-style-type: none;
 }
 
-.connection_mas img{
+.connection_mas{
     padding: 1%;
+
+    &_img{
+        padding: 1%; 
+    }
 }
 
 .contact_icons img{
