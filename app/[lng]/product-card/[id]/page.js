@@ -2,22 +2,29 @@
 
 import { useState, useEffect } from 'react';
 import { Inter } from "next/font/google";
-import ProductCard from "../components/ProductCard/ProductCard"; // Импортируем компонент ProductCard
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import ProductCard from "../../components/ProductCard"; // Импортируем компонент ProductCard
+import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
+import { useTranslation } from '../../../i18n/client'
+import { useParams } from 'next/navigation';
+import products from '@/public/product.json'
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Home({params: { lng }}) {
+
+  const { t } = useTranslation(lng)
+  const params = useParams();
+
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     // Загрузка данных из public/products.json
-    fetch('/product.json')
+    fetch("/product.json")
       .then((response) => response.json())
       .then((data) => {
         // Выбираем первый продукт или случайный
-        setProduct(data[0]);  // Или data[Math.floor(Math.random() * data.length)] для случайного
+        setProduct(data[params.id]);  // Или data[Math.floor(Math.random() * data.length)] для случайного
       })
       .catch((error) => {
         console.error("Ошибка при загрузке данных:", error);
@@ -28,9 +35,9 @@ export default function Home() {
 
   return (
     <main className={inter.className}>
-      <Header />
-      <ProductCard product={product} />
-      <Footer />
+      <Header lng={lng}/>
+      <ProductCard product={product} lng={lng} />
+      <Footer lng={lng}/>
     </main>
   );
 }
