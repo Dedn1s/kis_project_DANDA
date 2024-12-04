@@ -1,21 +1,17 @@
-"use client"
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import Button from "../sub_components/Button/Button";
-import { firstslide, secondslide } from "./Constants.js";
+import { sliderData } from "../Carousel/Constants"; 
 import styles from "./Carousel.module.css";
 import Image from "next/image";
-
-import { useTranslation } from '../../../i18n/client'
-
-const sliderData = [firstslide, secondslide];
+import { useTranslation } from '../../../i18n/client';
 
 export const Carousel = ({ lng }) => {
-
-  const { t } = useTranslation(lng, 'carousel')
+  const { t } = useTranslation(lng, 'carousel');
 
   return (
     <div className={styles.container}>
@@ -34,8 +30,8 @@ export const Carousel = ({ lng }) => {
               <Image
                 src={slide.imageSrc}
                 className={styles.slideImage}
-                alt={t(slide.title)}>
-              </Image>
+                alt={t(slide.title)}
+              />
               <div>
                 <p className={styles.slideDuration}>{t(slide.duration)}</p>
                 <h2 className={styles.slideTitle}>{t(slide.title)}</h2>
@@ -54,4 +50,4 @@ export const Carousel = ({ lng }) => {
       </Swiper>
     </div>
   );
-}
+};
