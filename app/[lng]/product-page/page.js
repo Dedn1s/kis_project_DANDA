@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Inter } from "next/font/google";
 import ProductCard from "../components/ProductCard/ProductCard"; // Импортируем компонент ProductCard
-import Header from '../components/Header/header';
+import Header from '../components/Header';
 import Footer from '../components/Footer/footer';
 
 const inter = Inter({ subsets: ['latin'] });

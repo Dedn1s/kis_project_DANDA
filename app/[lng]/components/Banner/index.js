@@ -1,9 +1,14 @@
-'use client';
-
+"use client"
 import { Plus } from "lucide-react";
 import styles from "./Banner.module.scss";
+import { useTranslation } from '../../../i18n/client'
 
-export default function Banner() {
+
+
+export const Banner = ({ lng }) => {
+
+  const { t } = useTranslation(lng, 'banner')
+
   return (
     <>
       <div className={styles.banner__limit}>
@@ -11,28 +16,24 @@ export default function Banner() {
         <div className='container'>
           <div className={styles.banner__col}>
             <h1 className={styles.content__title}>
-              Бытовая химия,
-              косметика
-              и хозтовары
+              {t('title')}
             </h1>
-            <h2 className={styles.content__subtitle}>оптом по кокчетаву и области</h2>
-            <button className={styles.banner__content__button} onClick={() => alert('У программиста лапки, она не успела сделать эту кнопку')}>
-              В каталог
+            <h2 className={styles.content__subtitle}>{t('subtitle')}</h2>
+            <button className={styles.banner__content__button}>
+              {t('incat')}
             </button>
             <div className={styles.banner__details}>
               <div className={styles.detail__item}>
                 <Plus className={styles.icon__plus} color="white" size={16} />
                 <p>
-                  Только самые
-                  выгодные предложения
+                  {t('offer')}
                 </p>
               </div>
               <div>
                 <div className={styles.detail__item}>
                   <Plus className={styles.icon__plus} color="white" size={16} />
                   <p>
-                    Бесплатная доставка
-                    по Кокчетаву от 10 тыс ₸
+                    {t('deliver')} ₸
                   </p>
                 </div>
               </div>
@@ -44,16 +45,14 @@ export default function Banner() {
         <div className={styles.detail__item}>
           <Plus className={styles.icon__plus} color="white" size={16} />
           <p>
-            Только самые
-            выгодные предложения
+            {t('offer')}
           </p>
         </div>
         <div>
           <div className={styles.detail__item}>
             <Plus className={styles.icon__plus} color="white" size={16} />
             <p>
-              Бесплатная доставка
-              по Кокчетаву от 10 тыс ₸
+              {t('deliver')} ₸
             </p>
           </div>
         </div>
