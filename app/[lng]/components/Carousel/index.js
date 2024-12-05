@@ -42,6 +42,7 @@ export const Carousel = ({ lng }) => {
                 <p className={styles.slideDescription}>{t(slide.description)}</p>
                 <Button
                   text={t(slide.buttonText)}
+                  style={{width: "248px"}}
                   textColor="white"
                   href={slide.link}
                   onClick={() => alert("Кнопка в разработке")}
