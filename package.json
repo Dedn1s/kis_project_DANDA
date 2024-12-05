@@ -1,6 +1,7 @@
 {
   "name": "project_danda",
   "version": "0.1.0",
+  "homepage": "https://Dedn1s.github.io/kis_project_DANDA",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,13 +10,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "accept-language": "^3.0.20",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^0.454.0",
     "next": "14.2.15",
     "next-i18next": "^15.3.1",
     "react": "^18",
+    "react-cookie": "^7.2.2",
     "react-dom": "^18",
     "reset-css": "^5.0.2",
-    "sass": "^1.80.6",
+    "sass": "^1.80.7",
     "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.0.3"
   }
 }
