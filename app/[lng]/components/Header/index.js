@@ -74,13 +74,13 @@ export const Header = ({ lng }) => {
                     </div>
 
                     <div className={styles.buttons}>
-                        <a className={styles.a_1} href="">{t('link_1')}</a>
+                        <a className={styles.primaryButton} href="">{t('link_1')}</a>
                         <div className={styles.line}></div>
-                        <a className={styles.a_1} href="">{t('link_2')}</a>
+                        <a className={styles.primaryButton} href="">{t('link_2')}</a>
                         <div className={styles.line}></div>
-                        <a className={styles.a_1} href="">{t('link_3')}</a>
+                        <a className={styles.primaryButton} href="">{t('link_3')}</a>
                         <div className={styles.line}></div>
-                        <a className={styles.a_2} href="">{t('link_4')}</a>
+                        <a className={styles.secondaryButton} href="">{t('link_4')}</a>
                     </div>
                 </div>
 
@@ -287,7 +287,6 @@ export const Header = ({ lng }) => {
                     </button>
                 </div>
             </div>
-
         </div>
     )
     

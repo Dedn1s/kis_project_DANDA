@@ -21,3 +21,5 @@ export const firstslide = {
     link: '/promo',
     id: '001',
   };
+  
+  export const sliderData = [firstslide, secondslide];
