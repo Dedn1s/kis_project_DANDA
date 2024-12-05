@@ -1,11 +1,19 @@
 :root {
-    --primary-color: rgb(255, 200, 94);
-    --black: rgb(17, 17, 17);
     --white: rgb(255, 255, 255);
-    --dark-gray: #333;
+    --dark-white: #e0e0e0;
+    --light-gray: rgba(255, 255, 255, 0.727);
+    --primary-header: #3F4E65;
     --gray: rgb(63, 78, 101);
+    --dark-gray: #333;
+    --black: rgb(17, 17, 17);
+    --primary-color: rgb(255, 200, 94);
+    --dark-yellow: rgb(236, 169, 35);
+    --brown: rgba(255, 198, 80, 0.3);
     --green: rgb(31, 216, 93);
+    --breakpoint-desktop: 1024px;
+    --breakpoint-tablet: 768px;
 }
+
 
 body {
     font-family: 'Inter', sans-serif; 
@@ -18,7 +26,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-tablet)) {
 
     .container {
         /* position: relative; */
@@ -26,5 +34,3 @@ body {
         margin: 0 auto;
     }
 }
-
-
