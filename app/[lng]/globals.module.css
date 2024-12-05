@@ -1,20 +1,5 @@
-:root {
-    --white: rgb(255, 255, 255);
-    --dark-white: #e0e0e0;
-    --light-gray: rgba(255, 255, 255, 0.727);
-    --primary-header: #3F4E65;
-    --gray: rgb(63, 78, 101);
-    --dark-gray: #333;
-    --black: rgb(17, 17, 17);
-    --primary-color: rgb(255, 200, 94);
-    --dark-yellow: rgb(236, 169, 35);
-    --brown: rgba(255, 198, 80, 0.3);
-    --green: rgb(31, 216, 93);
-}
 
-body {
-    font-family: 'Inter', sans-serif; 
-}
+
 
 .container {
     /* position: relative; */

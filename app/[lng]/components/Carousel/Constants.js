@@ -1,21 +1,23 @@
+import girl_carousel_img from "@/public/girl_carousel.png"
+import ryan_mm_img from "@/public/ryan_mm.png"
+
 export const firstslide = {
-    imageSrc: '/kis_project_DANDA/girl_carousel.png',
-    duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 04/09/22',
-    title: 'Бесплатный клининг',
-    description:
-      'Условия: совершите покупку в разделе бытовой химии на сумму от 1000 руб.',
-    buttonText: 'ПРИНЯТЬ УЧАСТИЕ',
+
+    imageSrc: girl_carousel_img,
+    duration: 'promotion',
+    title: 'title_1',
+    description: 'description_1',
+    buttonText: 'buttonText_1',
     link: '/promo',
     id: '000',
   };
   
   export const secondslide = {
-    imageSrc: '/kis_project_DANDA/ryan_mm.png',
-    duration: '*АКЦИЯ ДЕЙСТВУЕТ ДО 04/09/24',
-    title: 'М-м-м...',
-    description:
-      'Купите конфетки эм-эм-эмс на сумму от 1000 руб. и получите его рубашку',
-    buttonText: 'ПРИНЯТЬ УЧАСТИЕ',
+    imageSrc: ryan_mm_img,
+    duration: 'promotion',
+    title: 'title_2',
+    description: 'description_2',
+    buttonText: 'buttonText_2',
     link: '/promo',
     id: '001',
   };

@@ -99,7 +99,7 @@ $background-color_1: white;
 		color: #3F4E65;
 	}
 
-	img{
+	&_img{
 		height: 92px;
 		margin-left: 16px;
 		margin-right: 12px;
@@ -130,7 +130,7 @@ $background-color_1: white;
 	display: flex;
 	margin-left: 12px;
 
-	img {
+	&_img {
 		height: 44px;
 	}
 }
@@ -299,7 +299,7 @@ $background-color_1: white;
 		background: var(--primary-color);
 		border: none;
 
-		img {
+		&_img {
 			height: 10px;
 		}
 	}
@@ -350,7 +350,7 @@ $background-color_1: white;
 		border: none;
 		background-color: $background-color_1;
 
-		img {
+		&_img {
 			height: 32px;
 		}
 	}
@@ -371,7 +371,7 @@ $background-color_1: white;
 		border: none;
 		background-color: $background-color_1;
 
-		img {
+		&_img {
 			height: 16px;
 		}
 

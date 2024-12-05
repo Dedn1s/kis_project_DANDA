@@ -2,8 +2,9 @@
 import { Plus } from "lucide-react";
 import styles from "./Banner.module.scss";
 import { useTranslation } from '../../../i18n/client'
+import Image from "next/image";
 
-
+import banner_img from "@/public/banner.png"
 
 export const Banner = ({ lng }) => {
 
@@ -13,6 +14,10 @@ export const Banner = ({ lng }) => {
     <>
       <div className={styles.banner__limit}>
         <div className={styles.banner}></div>
+        <Image
+          src={banner_img}
+          className={styles.banner}>
+        </Image>
         <div className='container'>
           <div className={styles.banner__col}>
             <h1 className={styles.content__title}>

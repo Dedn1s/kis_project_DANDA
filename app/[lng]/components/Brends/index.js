@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Autoplay } from "swiper";
@@ -5,11 +6,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay"; 
 
+import { useTranslation } from '../../../i18n/client'
+
 import styles from "./BrandSlider.module.scss";
 
 SwiperCore.use([Pagination, Autoplay]);
 
-export default function BrandSlider() {
+export const BrandSlider = ({ lng }) => {
+
+  const { t } = useTranslation(lng, 'brandslider')
+
   const brandCount = 11;
   const brands = Array.from({ length: brandCount }, (_, index) => index + 1);
 
@@ -18,9 +24,9 @@ export default function BrandSlider() {
       <div className={styles.sliderContainer}>
         <div className={styles.header}>
           <h1 className={styles.title}>
-            <span>лучшие</span> <span className={styles.products}>товары</span>
+            <span>{t('title_1')}</span> <span className={styles.products}>{t('title_2')}</span>
           </h1>
-          <h2 className={styles.subtitle}>От ведущих мировых брэндов</h2>
+          <h2 className={styles.subtitle}>{t('title_3')}</h2>
         </div>
 
         <Swiper

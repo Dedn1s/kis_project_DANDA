@@ -1,17 +1,24 @@
+"use client"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import Button from "../sub_components/Button/Button";
-import {firstslide, secondslide} from "./Constants.js";
+import { firstslide, secondslide } from "./Constants.js";
 import styles from "./Carousel.module.css";
+import Image from "next/image";
+
+import { useTranslation } from '../../../i18n/client'
 
 const sliderData = [firstslide, secondslide];
 
-export default function Carousel() {
+export const Carousel = ({ lng }) => {
+
+  const { t } = useTranslation(lng, 'carousel')
+
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -24,17 +31,17 @@ export default function Carousel() {
         {sliderData.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className={styles.slideContent}>
-              <img
+              <Image
                 src={slide.imageSrc}
-                alt={slide.title}
                 className={styles.slideImage}
-              />
+                alt={t(slide.title)}>
+              </Image>
               <div>
-                <p className={styles.slideDuration}>{slide.duration}</p>
-                <h2 className={styles.slideTitle}>{slide.title}</h2>
-                <p className={styles.slideDescription}>{slide.description}</p>
+                <p className={styles.slideDuration}>{t(slide.duration)}</p>
+                <h2 className={styles.slideTitle}>{t(slide.title)}</h2>
+                <p className={styles.slideDescription}>{t(slide.description)}</p>
                 <Button
-                  text={slide.buttonText}
+                  text={t(slide.buttonText)}
                   textColor="white"
                   href={slide.link}
                   onClick={() => alert("Кнопка в разработке")}
@@ -44,6 +51,6 @@ export default function Carousel() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </div>
   );
 }
