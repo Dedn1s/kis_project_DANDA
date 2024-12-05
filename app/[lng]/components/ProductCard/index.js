@@ -1,9 +1,22 @@
+"use client"
+
 import { useState } from "react";
+import { useTranslation } from '../../../i18n/client'
 import Image from "next/image";
 import Button from "../sub_components/Button/Button";
 import styles from "./ProductCard.module.scss";
 
-const ProductCard = ({ product }) => {
+import korzina_img from "@/public/ProductDetails/korzina.svg"
+import vector_bytilka_img from "@/public/vector-bytilka.png"
+import vector_box_img from "@/public/vector-box.png"
+import share_img from "@/public/ProductDetails/share.svg"
+import download_gray_img from "@/public/download-gray.png"
+
+
+const ProductCard = ({ product }, { lng }) => {
+
+  const { t } = useTranslation(lng, 'productcard')
+
   const [quantity, setQuantity] = useState(1);
   const [isDescriptionOpen, setDescriptionOpen] = useState(false);
   const [isLinkCopied, setLinkCopied] = useState(false);
@@ -19,7 +32,7 @@ const ProductCard = ({ product }) => {
 
   const addToCart = () => {
     if (product.amount > 0) {
-      alert(`Добавлено в корзину: ${quantity} шт.`);
+      alert(`${t('add_cart')} ${quantity} ${t('count')}`);
     }
   };
 
@@ -34,14 +47,14 @@ const ProductCard = ({ product }) => {
     }
   };
 
-  const stockText = product.amount > 0 ? "В наличии" : "Нет в наличии";
+  const stockText = (product.amount > 0) ? t('availability_1') : t('availability_2');
 
   return (
     <div className={styles.productCard}>
       <div className={styles.imageSection}>
         <Image
           src={product.image}
-          alt={product.nameRu}
+          alt={lng == 'ru' ? product.nameRu : product.nameEn}
           width={350}
           height={350}
           className={styles.productImage}
@@ -50,29 +63,27 @@ const ProductCard = ({ product }) => {
 
       <div className={styles.infoSection}>
         <p
-          className={`${styles.inStock} ${
-            product.amount === 0 ? styles.outOfStock : ""
-          }`}
+          className={`${styles.inStock} ${product.amount === 0 ? styles.outOfStock : ""
+            }`}
         >
           {stockText}
         </p>
 
         <div className={styles.productHeader}>
           <span className={styles.productBrand}>{product.brand?.name}</span>
-          <span className={styles.productTitle}>{product.nameRu}</span>
+          <span className={styles.productTitle}>{lng == 'ru' ? product.nameRu : product.nameEn}</span>
         </div>
 
         <div className={styles.sizeInfo}>
           {product.sizeType === "volume" ? (
-            <img
-              src="/vector-bytilka.png"
-              alt="Volume icon"
+
+            <Image
+              src={vector_bytilka_img}
               className={styles.vectorBytilka}
             />
           ) : (
-            <img
-              src="/vector-box.png"
-              alt="Box icon"
+            <Image
+              src={vector_box_img}
               className={styles.vectorBox}
             />
           )}
@@ -106,9 +117,10 @@ const ProductCard = ({ product }) => {
           </div>
 
           <Button
-            text="В корзину"
+            text={t('in_basket')}
             textColor="white"
-            icon="/ProductDetails/korzina.svg"
+            icon={korzina_img}
+            icon_style={{ width: "30px", height: "30px" }}
             style={{ width: "260px", height: "60px" }}
             onClick={addToCart}
             disabled={product.amount === 0}
@@ -122,7 +134,7 @@ const ProductCard = ({ product }) => {
               onClick={handleShareButtonClick}
             >
               <Image
-                src="/ProductDetails/share.svg"
+                src={share_img}
                 alt="Share"
                 width={20}
                 height={20}
@@ -130,23 +142,22 @@ const ProductCard = ({ product }) => {
             </button>
             {isLinkCopied && (
               <div className={styles.linkCopied}>
-                Ссылка скопирована!
+                {t('linkcop')}
               </div>
             )}
           </div>
 
           <div className={styles.promotionBox}>
             <p className={styles.promotionText}>
-              При покупке от <span>10 000 ₸</span> бесплатная доставка по
-              Кокчетаву и области
+              {t('prom_1')} <span>10 000 ₸</span> {t('prom_2')}
             </p>
           </div>
 
           <button className={styles.priceListButton}>
             <a href="/path/to/pricelist.pdf" download>
-              Прайс-лист
+              {t('pricelist')}
               <Image
-                src="/download-gray.png"
+                src={download_gray_img}
                 alt="Download"
                 width={20}
                 height={20}
@@ -158,31 +169,31 @@ const ProductCard = ({ product }) => {
 
         <div className={styles.characteristicsList}>
           <p>
-            Производитель:{" "}
+            {t('manufacturer')}:{" "}
             <span className={styles.characteristics}>
               {product.manufacturer}
             </span>
           </p>
           <p>
-            Бренд:{" "}
+            {t('brend')}:{" "}
             <span className={styles.characteristics}>{product.brand?.name}</span>
           </p>
           <p>
-            Артикул:{" "}
+            {t('article')}:{" "}
             <span className={styles.characteristics}>{product.article}</span>
           </p>
           <p>
-            Штрихкод:{" "}
+            {t('code')}:{" "}
             <span className={styles.characteristics}>{product.barcode}</span>
           </p>
         </div>
 
         <div className={styles.description}>
           <h2 onClick={toggleDescription} className={styles.descriptionTitle}>
-            Описание {isDescriptionOpen ? "▴" : "▾"}
+            {t('descript')} {isDescriptionOpen ? "▴" : "▾"}
           </h2>
           {isDescriptionOpen && (
-            <p className={styles.descriptionText}>{product.descriptionRu}</p>
+            <p className={styles.descriptionText}>{lng == 'ru' ? product.descriptionRu : product.descriptionEn}</p>
           )}
         </div>
       </div>

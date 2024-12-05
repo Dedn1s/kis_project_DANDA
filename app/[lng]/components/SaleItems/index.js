@@ -3,6 +3,7 @@ import Button from "../sub_components/Button/Button";
 import products from '/products.json'; 
 import { useTranslation } from '../../../i18n'
 import Image from "next/image";
+import Link from 'next/link'
 
 import vector_bytilka_img from '@/public/vector-bytilka.png'
 import vector_box_img from '@/public/vector-box.png'
@@ -41,9 +42,9 @@ export const SaleItems =  async ({ lng }) => {
                             {product.sizeType === "box" ? `${product.count}x${product.size} ${t('g')}` : `${product.size} ${t('ml')}`}
                         </span>
 
-                        <div className={styles.productDescription}>
-                            <span className={styles.bold}>{product.brand.name}</span> {lng == "ru" ? product.nameRu.replace(product.brand.name, ""): product.nameEn.replace(product.brand.name, "")}
-                        </div>
+                        <Link href={`/${lng}/product-card/${product.id - 1}`} className={styles.productDescription}>
+                            <span className={styles.bold}>{product.brand.name} {lng == "ru" ? product.nameRu.replace(product.brand.name, ""): product.nameEn.replace(product.brand.name, "")}</span>
+                        </Link>
 
                         <div className={styles.barcode}>
                             <span className={styles.barcodeLabel}>{t('code')}:</span>

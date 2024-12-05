@@ -105,6 +105,11 @@ $font-family_1: Inter, sans-serif;
 	font-size: 16px;
 	line-height: 130%;
 	text-align: left;
+	text-decoration: none;
+
+	:hover{
+		color: $color_1
+	}
 	.bold {
 		font-weight: 500;
 	}
