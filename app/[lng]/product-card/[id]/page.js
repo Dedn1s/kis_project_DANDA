@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Inter } from "next/font/google";
 import ProductCard from "../../components/ProductCard"; // Импортируем компонент ProductCard
 import { Header } from '../../components/Header';
+import { SimilarItems } from '../../components/SimilarItems';
 import { Footer } from '../../components/Footer';
 import { useTranslation } from '../../../i18n/client'
 import { useParams } from 'next/navigation';
@@ -23,7 +24,7 @@ export default function Home({params: { lng }}) {
     fetch("/product.json")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(data)
         // Выбираем первый продукт или случайный
         setProduct(data[params.id]);  // Или data[Math.floor(Math.random() * data.length)] для случайного
       })
@@ -38,6 +39,7 @@ export default function Home({params: { lng }}) {
     <main className={inter.className}>
       <Header lng={lng}/>
       <ProductCard product={product} lng={lng} />
+      <SimilarItems lng={lng}/>
       <Footer lng={lng}/>
     </main>
   );

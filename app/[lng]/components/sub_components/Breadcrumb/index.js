@@ -6,9 +6,9 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 
-const Breadcrumb = ({ breadcrumbItems = [] }) => {
+const Breadcrumb = ({ breadcrumbItems = [] }, { lng }) => {
   const { isTablet, isMobile } = useWindowSize();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(lng, 'bread');
 
   if (isMobile || isTablet) {
     const previousPath =
@@ -24,7 +24,7 @@ const Breadcrumb = ({ breadcrumbItems = [] }) => {
             className={styles.backLink}
           >
             <span className={styles.backSymbol}>&lt;</span>
-            <span className={styles.backText}>{t('Back')}</span>
+            <span className={styles.backText}>{t('back')}</span>
           </Link>
         </div>
       </div>
