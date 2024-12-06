@@ -5,6 +5,7 @@ import { useTranslation } from '../../../i18n/client'
 import Image from "next/image";
 import Button from "../sub_components/Button/Button";
 import styles from "./ProductCard.module.scss";
+import Breadcrumb from "../sub_components/Breadcrumb/Breadcrumb";
 
 import korzina_img from "@/public/ProductDetails/korzina.svg"
 import vector_bytilka_img from "@/public/vector-bytilka.png"
@@ -49,8 +50,21 @@ const ProductCard = ({ product }, { lng }) => {
 
   const stockText = (product.amount > 0) ? t('availability_1') : t('availability_2');
 
+
+  const breadcrumbItems = [
+    { name: 'Главная', path: '/' },
+    {
+      name: `${product.shortNameRu} ${product.nameRu}`,
+      path: `/product/${product.id}`,
+    },
+  ];
+
+
   return (
     <div className={styles.productCard}>
+      
+      <Breadcrumb breadcrumbItems={breadcrumbItems} />
+      
       <div className={styles.imageSection}>
         <Image
           src={product.image}
