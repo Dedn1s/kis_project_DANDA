@@ -13,7 +13,7 @@
  
 }
 
-.container {
+.breadcrumbContainer {
   margin: 0 auto;
   max-width: 1366px;
 
@@ -63,14 +63,14 @@
   }
 }
 
-.backButton {
+.goBackButton {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
 }
 
-.backLink {
+.goBackLink {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -78,7 +78,7 @@
   font-family: var(--font-inter);
 }
 
-.backSymbol {
+.goBackSymbol {
   font-size: 14px;
   width: 32px;
   height: 32px;
@@ -95,7 +95,7 @@
   }
 }
 
-.backText {
+.goBackText {
   font-size: 10px;
   font-weight: 600;
   line-height: 12px;
