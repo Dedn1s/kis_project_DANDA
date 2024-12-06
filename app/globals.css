@@ -10,6 +10,8 @@
     --dark-yellow: rgb(236, 169, 35);
     --brown: rgba(255, 198, 80, 0.3);
     --green: rgb(31, 216, 93);
+    --breakpoint-desktop: 1024px;
+    --breakpoint-tablet: 768px;
 }
 
 
@@ -24,7 +26,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-tablet)) {
 
     .container {
         /* position: relative; */
