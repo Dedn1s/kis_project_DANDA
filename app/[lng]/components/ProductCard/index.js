@@ -15,7 +15,6 @@ import download_gray_img from "@/public/download-gray.png"
 
 
 const ProductCard = ({ product }, { lng }) => {
-
   const { t } = useTranslation(lng, 'productcard')
 
   const [quantity, setQuantity] = useState(1);
@@ -50,7 +49,6 @@ const ProductCard = ({ product }, { lng }) => {
 
   const stockText = (product.amount > 0) ? t('availability_1') : t('availability_2');
 
-
   const breadcrumbItems = [
     { name: 'Главная', path: '/' },
     {
@@ -58,8 +56,6 @@ const ProductCard = ({ product }, { lng }) => {
       path: `/product/${product.id}`,
     },
   ];
-
-
   return (
     <div className={styles.productCard}>
       
@@ -67,8 +63,8 @@ const ProductCard = ({ product }, { lng }) => {
       
       <div className={styles.imageSection}>
         <Image
-          src={product.image}
-          alt={lng == 'ru' ? product.nameRu : product.nameEn}
+          src="/aos.png"
+          alt={product.name}
           width={350}
           height={350}
           className={styles.productImage}
@@ -85,7 +81,7 @@ const ProductCard = ({ product }, { lng }) => {
 
         <div className={styles.productHeader}>
           <span className={styles.productBrand}>{product.brand?.name}</span>
-          <span className={styles.productTitle}>{lng == 'ru' ? product.nameRu : product.nameEn}</span>
+          <span className={styles.productTitle}>{product.name}</span>
         </div>
 
         <div className={styles.sizeInfo}>

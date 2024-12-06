@@ -23,6 +23,7 @@ export default function Home({params: { lng }}) {
     fetch("/product.json")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         // Выбираем первый продукт или случайный
         setProduct(data[params.id]);  // Или data[Math.floor(Math.random() * data.length)] для случайного
       })
