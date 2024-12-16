@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslation } from '../../../i18n/client'
+import { useParams } from 'next/navigation';
 import Image from "next/image";
 import Button from "../sub_components/Button/Button";
 import styles from "./ProductCard.module.scss";
@@ -15,7 +16,8 @@ import download_gray_img from "@/public/download-gray.png"
 
 
 const ProductCard = ({ product }, { lng }) => {
-  const { t } = useTranslation(lng, 'productcard')
+  const { t } = useTranslation(lng, 'productcard');
+  const params = useParams();
 
   const [quantity, setQuantity] = useState(1);
   const [isDescriptionOpen, setDescriptionOpen] = useState(false);
@@ -203,7 +205,7 @@ const ProductCard = ({ product }, { lng }) => {
               {t('descript')} {isDescriptionOpen ? "▴" : "▾"}
             </h2>
             {isDescriptionOpen && (
-              <p className={styles.descriptionText}>{lng == 'ru' ? product.descriptionRu : product.descriptionEn}</p>
+              <p className={styles.descriptionText}>{params.lng === 'ru' ? product.descriptionRu : product.descriptionEn}</p>
             )}
           </div>
         </div>
