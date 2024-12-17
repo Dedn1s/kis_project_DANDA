@@ -1,0 +1,50 @@
+[
+    {
+        "category": "Бытовая химия",
+        "subCategory": [
+            {
+                "name": "Для мытья посуды",
+                "url": "for_washing_dishes"
+            },
+            {
+                "name": "Для стирки одежды",
+                "url": "for_washing_clothes"
+            }
+        ],
+        "url": "household_chemicals"
+    },
+    {
+        "category": "Косметика и гигиена",
+        "subCategory": [
+            {
+                "name": "Уход за телом",
+                "url": "body_care"
+            },
+            {
+                "name": "Уход за лицом",
+                "url": "facial_care"
+            },
+            {
+                "name": "Уход за руками",
+                "url": "hand_care"
+            },
+            {
+                "name": "Уход за ногами",
+                "url": "foot_care"
+            },
+            {
+                "name": "Уход за волосами",
+                "url": "hair_care"
+            },
+            {
+                "name": "Средства для загара",
+                "url": "tanning_products"
+            },
+            {
+                "name": "Средства для бритья",
+                "url": "shaving_products"
+            }
+        ],
+        "url": "cosmetics_and_hygiene"
+    }
+]
