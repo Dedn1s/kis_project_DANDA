@@ -1,16 +1,19 @@
-import { useTranslation } from '../../../i18n'
+"use client"
+
+import { useTranslation } from '../../../i18n/client'
 import { useParams } from 'next/navigation';
 
 import Link from 'next/link';
 
 import categories from "@/public/categoriesList.json"
 
-export default function CategoriesList({ lng }) {
-    const { t } = useTranslation(lng, 'productcard');
+export const CategoriesList = ({ lng }) => {
+    const { t } = useTranslation(lng, 'categories_list');
     const params = useParams();
     return (
         <div>
             <h1>Категории</h1>
+            <p>{t('example1')}</p>{/* пример вызова локализации(нужно будет удалить)*/}
             {categories.map((cat) => (
                 <div>
                     <Link href={`/catalog/${cat.url}`}>

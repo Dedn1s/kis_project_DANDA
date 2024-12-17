@@ -6,11 +6,11 @@ import { useParams } from 'next/navigation';
 
 import Catalog_list from '../../components/Catalog_list';
 import products_file from '@/public/product.json';
-import CategoriesList from '../../components/CategoriesLIst';
+import { CategoriesList } from '../../components/CategoriesLIst';
 
 export default function Catalog({ params: { lng } }) {
 
-  const { t } = useTranslation(lng)
+  const { t } = useTranslation(lng, 'catalog')
   const params = useParams();
 
   const brand_counts = products_file.reduce((acc, product) => {
@@ -79,6 +79,7 @@ export default function Catalog({ params: { lng } }) {
 
   return (
     <div>
+      <p>{t('example1')}</p>{/*пример использования локализации(нужно будет удалить)*/}
       <h1>Фильтр продуктов</h1>
       <div>
         <h2>Бренды</h2>

@@ -1,6 +1,4 @@
-
-
-export default function ProductList({products}){
+export default function ProductList ({products}){
   return (
     <div>
       {products.length > 0 ? (
