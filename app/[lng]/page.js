@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Banner } from "./components/Banner";
 import { Header } from "./components/Header";
 import { CategoriesPage } from "./components/Categories"
-import { BrandSlider } from "./components/Brends";
+import { BrandSlider } from "./components/Brands";
 import { Carousel } from "./components/Carousel";
 import { Footer } from "./components/Footer"
 import { Contacts } from "./components/contacts";

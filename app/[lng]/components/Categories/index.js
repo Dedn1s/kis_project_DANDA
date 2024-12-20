@@ -14,11 +14,11 @@ import mommys_img from "@/public/mommys.png"
 import posuda_img from "@/public/posuda.png"
 
 const categories = [
-  { name: "name_1", image: chemist_img, link: "/household-chemicals" },
-  { name: "name_2", image: clean_img, link: "/cosmetics" },
-  { name: "name_3", image: house_img, link: "/home-goods" },
-  { name: "name_4", image: mommys_img, link: "/kids-and-moms" },
-  { name: "name_5", image: posuda_img, link: "/tableware" },
+  { name: "name_1", image: chemist_img, link: "/catalog/household_chemicals" },
+  { name: "name_2", image: clean_img, link: "/catalog/cosmetics" },
+  { name: "name_3", image: house_img, link: "/catalog/home_goods" },
+  { name: "name_4", image: mommys_img, link: "/catalog/kids_and_moms" },
+  { name: "name_5", image: posuda_img, link: "/catalog/tableware" },
 ];
 
 export const CategoriesPage = async ({ lng }) => {

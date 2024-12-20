@@ -1,0 +1,29 @@
+$color_1: var(--primary-color);
+
+.list{
+    margin-top: 0;
+
+    &_category{
+        font-size: 1.2em;
+        text-decoration: none;
+        color: black;
+
+        :hover{
+            color: $color_1;
+        }
+    }
+
+    &_subcategory{
+        font-size: 1em;
+        text-decoration: none;
+        color: black;
+
+        :hover{
+            color: $color_1;
+        }
+    }
+}
+
+.mainTest{
+    font-size: medium;
+}

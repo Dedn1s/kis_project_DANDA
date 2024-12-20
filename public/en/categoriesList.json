@@ -1,0 +1,53 @@
+[
+    {
+        "category":"Household chemicals",
+        "subCategory":
+        [
+            {
+                "name": "For washing dishes",
+                "url": "for_washing_dishes"
+            },
+            {
+                "name": "For washing clothes",
+                "url" : "for_washing_clothes"
+            }
+        ],
+        "url":"household_chemicals"
+    },
+    {
+        "category":"Cosmetics and hygiene",
+        "subCategory":
+        [
+            {
+                "name": "Body care",
+                "url": "body_care"
+            },
+            {
+                "name": "Facial care",
+                "url" : "facial_care"
+            },
+            {
+                "name": "Hand care",
+                "url" : "hand_care"
+            },
+            {
+                "name": "Foot care",
+                "url" : "foot_care"
+            },
+            {
+                "name": "Hair care",
+                "url" : "hair_care"
+            },
+            {
+                "name": "Tanning products",
+                "url" : "tanning_products"
+            },
+            {
+                "name": "Shaving products",
+                "url" : "shaving_products"
+            }
+        ],
+        "url":"cosmetics_and_hygiene"
+    }
+
+]

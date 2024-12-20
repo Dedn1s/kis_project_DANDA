@@ -5,19 +5,20 @@ import Image from "next/image";
 export default function Button({
     text,
     href,
+    action,
     style,
     icon,
     icon_style,
     size = "medium",
-    textColor = "inherit", 
+    textColor = "inherit",
+    textSize,
 }) {
-    const buttonClass = `${styles.button} ${
-        styles[`button_${size}`] || styles.button_medium
-    }`;
+    const buttonClass = `${styles.button} ${styles[`button_${size}`] || styles.button_medium
+        }`;
 
     const customStyle = {
-        color: textColor, 
-        ...style, 
+        color: textColor,
+        ...style,
     };
 
     if (href) {
@@ -25,24 +26,31 @@ export default function Button({
             <Link href={href} className={buttonClass} style={customStyle}>
                 {text}
                 {icon && <Image
-                        src = {icon}
-                        className={styles.icon}
-                        style = {icon_style}></Image>}
+                    src={icon}
+                    className={styles.icon}
+                    style={icon_style}></Image>}
             </Link>
         );
     }
 
     return (
         <button
+            onClick={action}
             className={buttonClass}
             style={customStyle}
             aria-disabled="true"
         >
             {text}
-            {icon && <Image
-                        src = {icon}
-                        className={styles.icon}
-                        style = {icon_style}></Image>}
+
+            {icon && text && <Image
+                src={icon}
+                className={styles.icon_text}
+                style={icon_style}></Image>}
+
+            {icon && text === "" && <Image
+                src={icon}
+                className={styles.icon}
+                style={icon_style}></Image>}
         </button>
     );
 }

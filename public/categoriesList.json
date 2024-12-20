@@ -1,0 +1,69 @@
+[
+    {
+        "category_nameEN":"Household chemicals",
+        "category_nameRU":"Бытовая химия",
+        "subCategory":
+        [
+            {
+                "nameEN": "For washing dishes",
+                "nameRU": "Для мытья посуды",
+                "url": "for_washing_dishes"
+            },
+            {
+                "nameEN": "For washing clothes",
+                "nameRU": "Для стирки одежды",
+                "url" : "for_washing_clothes"
+            }
+        ],
+        "url":"household_chemicals"
+    },
+    {
+        "category_nameEN":"Cosmetics and hygiene",
+        "category_nameRU": "Косметика и гигиена",
+        "subCategory":
+        [
+            {
+                "nameEN": "Body care",
+                "nameRU": "Уход за телом",
+                "url": "body_care"
+            },
+            {
+                "nameEN": "Facial care",
+                "nameRU": "Уход за лицом",
+                "url" : "facial_care"
+            },
+            {
+                "nameEN": "Hand care",
+                "nameRU": "Уход за руками",
+                "url" : "hand_care"
+            },
+            {
+                "nameEN": "Foot care",
+                "nameRU": "Уход за ногами",
+                "url" : "foot_care"
+            },
+            {
+                "nameEN": "Hair care",
+                "nameRU": "Уход за волосами",
+                "url" : "hair_care"
+            },
+            {
+                "nameEN": "Tanning products",
+                "nameRU": "Средства для загара",
+                "url" : "tanning_products"
+            },
+            {
+                "nameEN": "Shaving products",
+                "nameRU": "Средства для бритья",
+                "url" : "shaving_products"
+            },
+            {
+                "nameEN": "Oral hygiene",
+                "nameRU": "Гигиена полости рта",
+                "url" : "oral_hygiene"
+            }
+        ],
+        "url":"cosmetics_and_hygiene"
+    }
+
+]
