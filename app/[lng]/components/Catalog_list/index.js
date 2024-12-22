@@ -59,7 +59,7 @@ export default function ProductList({ products }) {
               <Button
                   text= {"В корзину"}
                   textColor="white"
-                  style={{ width: "200px", height: "44px", marginLeft: "160px", marginTop: "184px", marginRight: "20px" }}
+                  style={{ width: "200px", height: "44px", marginLeft: "160px", marginTop: "208px", marginRight: "20px" }}
               />
             </div>
           </div>
