@@ -24,6 +24,12 @@ $font-family_1: Inter, sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  @media(max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
 }
 
 .card {
