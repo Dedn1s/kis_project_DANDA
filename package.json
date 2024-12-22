@@ -23,7 +23,8 @@
     "react-use-cookie": "^1.6.1",
     "reset-css": "^5.0.2",
     "sass": "^1.80.7",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "use-global-hook": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "8.57.1",
