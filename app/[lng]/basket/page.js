@@ -1,19 +1,11 @@
-"use client"
-//import Catalog_list from '../../components/Catalog_list';
+"use client";
 
-export default function Basket({ params: { lng } }) {
+import Basket from "../basket/Basket";
 
-  const ids_1 = JSON.parse(localStorage.getItem('basket'));
-
-
+export default function Page({ params: { lng } }) {
   return (
     <div>
-      {ids_1.map((prod) => (
-        <div>
-        <h1>ID:{prod[0].id}</h1>
-        <p>name:{prod[0].shortNameRu}</p>
-        </div>
-      ))}
+      <Basket params={{ lng }} />
     </div>
-  )
+  );
 }
