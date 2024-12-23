@@ -10,6 +10,7 @@ import { CategoriesList } from '../../components/CategoriesList';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import Button from '../../components/sub_components/Button/Button';
+import Breadcrumb from "../../components/sub_components/Breadcrumb";
 import TextForm from "../../components/sub_components/TextForm/TextForm"
 
 import styles from "./Cetagory.module.scss"
@@ -86,9 +87,18 @@ export default function Catalog({ params: { lng } }) {
     setFilteredProducts(products);
   };
 
+  const breadcrumbItems = [
+    { name: 'Главная', path: '/' },
+    {
+      name: params.category,
+      path: '/'
+    },
+  ];
+
   return (
     <div>
       <Header lng={lng}/>
+      <Breadcrumb breadcrumbItems={breadcrumbItems} lng={lng} />
       <div className={styles.all_page}>
         <div className={styles.filters}>
           <h2 className={styles.main_text}>ПОДБОР ПО ПАРАМЕТРАМ</h2>
