@@ -59,6 +59,18 @@ export default function ProductList({ products }) {
               <Button
                   text= {"В корзину"}
                   textColor="white"
+                  action={() => {alert("Товар в корзине");
+                                let ids = localStorage.getItem('basket');
+                                if (!ids){
+                                  const add = [[product, 1]]
+                                }else{
+                                  ids = JSON.parse(ids);
+                                  const pr = [product, 1];
+                                  const add = [ids, pr];
+                                }
+                                const pr = [product, 1];
+                                const add = [ids, pr]
+                                 localStorage.setItem('basket', JSON.stringify(add))} }
                   style={{ width: "200px", height: "44px", marginLeft: "160px", marginTop: "184px", marginRight: "20px" }}
               />
             </div>

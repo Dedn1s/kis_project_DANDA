@@ -126,7 +126,7 @@ export const Header = ({ lng }) => {
                     <Button
                         text={t('pricelist')}
                         textColor="white"
-                        onClick={() => alert("Кнопка в разработке")}
+                        action={() => alert("Кнопка в разработке")}
                         style={{ width: "180px", height: "59px" }}
                         icon= {download_img}
                         icon_style={{width: "30px", height: "30px"}}
