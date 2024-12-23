@@ -4,11 +4,24 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "../../../i18n/client";
 import { useParams } from "next/navigation";
 
+<<<<<<< HEAD
 import Catalog_list from "../../components/Catalog_list";
 import products_file from "@/public/product.json";
 import { CategoriesList } from "../../components/CategoriesLIst";
 
 import styles from "./Catalog.modules.scss";
+=======
+import Catalog_list from '../../components/Catalog_list';
+import products_file from '@/public/product.json';
+import { CategoriesList } from '../../components/CategoriesList';
+import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
+import Button from '../../components/sub_components/Button/Button';
+
+import styles from "./Cetagory.module.scss"
+
+import catalog_img from "@/public/catalog.png"//временное фото, добавь фото карзины 
+>>>>>>> e92e3aee6d645f38eb587e585210001716a06aa7
 
 export default function Catalog({ params: { lng } }) {
   const { t } = useTranslation(lng, "catalog");
@@ -71,6 +84,7 @@ export default function Catalog({ params: { lng } }) {
   };
 
   return (
+<<<<<<< HEAD
     <div className={styles.catalogContainer}>
       <div className={styles.filters}>
         <h1 className={styles.filterTitle}>{t("ПОДБОР ПО ПАРАМЕТРАМ")}</h1>
@@ -112,6 +126,100 @@ export default function Catalog({ params: { lng } }) {
         <CategoriesList lng={lng} />
         <Catalog_list products={filteredProducts} />
       </div>
+=======
+    <div>
+      <Header lng={lng}/>
+      <div className={styles.all_page}>
+        <div className={styles.filters}>
+          <h2 className={styles.main_text}>Подбор по параметрам</h2>
+          <div>
+            <p className={styles.filters_subtext}>Цена</p>
+            <div className={styles.filters_price_box}>
+              <form className={styles.filters_price}>
+                <input
+                  type="number"
+                  value={selectedMinPrice}
+                  onChange={(e) => setSelectedMinPrice(e.target.value)}
+                />
+              </form>
+              <p>-</p>
+              <form className={styles.filters_price}>
+                <input
+                  type="number"
+                  value={selectedMaxPrice}
+                  onChange={(e) => setSelectedMaxPrice(e.target.value)}
+                />
+              </form>
+            </div>
+          </div>
+
+          <div>
+            <h2 className={styles.filters_maintext}>Производитель</h2>
+            <div className={styles.filters_manufacturers}>
+              {all_manufacturers.map(manufacturer => (
+                <label key={manufacturer} className={styles.filters_label}>
+                  <input
+                    type="checkbox"
+                    checked={selectedManufacturers.includes(manufacturer)}
+                    onChange={() => {
+                      if (selectedManufacturers.includes(manufacturer)) {
+                        setSelectedManufacturers(selectedManufacturers.filter(m => m !== manufacturer));
+                      } else {
+                        setSelectedManufacturers([...selectedManufacturers, manufacturer]);
+                      }
+                    }}
+                  />
+                  <p>{manufacturer} <span className={styles.filters_label_count}>({manufacturer_counts[manufacturer]})</span></p>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 h2 className={styles.filters_maintext}>Бренды</h2>
+            <div className={styles.filters_brand}>
+              {all_brands.map(brand => (
+                <label key={brand} className={styles.filters_label}>
+                  <input
+                    type="checkbox"
+                    checked={selectedBrands.includes(brand)}
+                    onChange={() => {
+                      if (selectedBrands.includes(brand)) {
+                        setSelectedBrands(selectedBrands.filter(b => b !== brand));
+                      } else {
+                        setSelectedBrands([...selectedBrands, brand]);
+                      }
+                    }}
+                  />
+                  <p>{brand} <span className={styles.filters_label_count}>({brand_counts[brand]})</span></p>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.filters_buttons}>
+            <Button
+              text="Применить"
+              textColor="white"
+              action={applyFilters}
+              style={{ width: "120px", height: "40px", fontsize: "1em" }}
+            />
+            <Button
+              text=""
+              textColor="white"
+              action={resetFilters}
+              icon={catalog_img}
+              style={{ width: "40px", height: "40px" }}
+              icon_style={{width: "24px", height: "24px"}}
+            />
+          </div>
+
+          <CategoriesList lng={lng} />
+        </div>
+        <Catalog_list products={products} />
+      </div>
+      <Footer lng={lng}/>
+>>>>>>> e92e3aee6d645f38eb587e585210001716a06aa7
     </div>
   );
 }

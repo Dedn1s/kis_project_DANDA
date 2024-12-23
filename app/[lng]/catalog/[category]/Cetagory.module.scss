@@ -1,0 +1,99 @@
+$color_1: var(--primary-color);
+
+.main_text {
+    font-size: medium;
+}
+
+.all_page {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+
+    &_maintext {
+        font-size: medium;
+    }
+
+    &_subtext {
+        font-size: smaller;
+        color: gray;
+    }
+
+    &_brand {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    &_manufacturers {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    &_label {
+        display: flex;
+        height: 28px;
+        align-items: center;
+
+        &_count {
+            font-size: 0.8em;
+        }
+
+        :hover {
+            color: $color_1;
+        }
+    }
+
+    &_buttons {
+        display: flex;
+        margin-left: -10px;
+        margin-top: 10px;
+        justify-content: space-around;
+    }
+
+    &_price {
+        display: flex;
+        height: 16px;
+        width: 44%;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 80px;
+
+        input {
+            height: 100%;
+            width: 80%;
+            outline: none;
+            background: none;
+            border: none;
+            font-size: 12px;
+            text-align: center;
+            color: var(--light-gray);
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */
+        }
+
+        &_box {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 20px;
+        }
+    }
+}
