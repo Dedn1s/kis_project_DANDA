@@ -129,6 +129,9 @@ $background-color_1: var(--white);
 .hat_bascket {
 	display: flex;
 	margin-left: 12px;
+	border: none;
+	background-color: white;
+	cursor: pointer;
 
 	&_img {
 		height: 44px;
