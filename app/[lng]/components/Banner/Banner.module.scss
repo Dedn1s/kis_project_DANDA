@@ -141,6 +141,12 @@ $background-color_1: var(--primary-color);
 	}
 }
 @media (max-width: 768px) {
+	.banner {
+		background-size: contain;
+		background-position: center center;
+		width: 100%; 
+	  }
+	  
 	.banner__col {
 		width: 100%;
 		padding-right: 0px;
@@ -183,6 +189,12 @@ $background-color_1: var(--primary-color);
 	}
 	.banner__details {
 		display: none;
+	}
+	.detail__item {
+		display: flex;
+		align-items: center; 
+		white-space: nowrap; 
+		margin: 0; 
 	}
 	.banner__details_mob {
 		width: 90%;
