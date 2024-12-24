@@ -1,0 +1,132 @@
+$color_1: var(--primary-color);
+
+
+.main_text {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.all_page {
+    display: flex;
+    gap: 108px;
+    width: 80%;
+    margin: 0 auto;
+
+    @media(max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+      }
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+
+    &_maintext {
+        margin-top: 30px;
+        font-size: medium;
+    }
+
+    &_subtext {
+        font-size: smaller;
+        color: gray;
+    }
+
+    &_brand {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    &_separator {
+        border-bottom: 2px dotted var(--dark-gray); 
+        width: 260px; 
+        margin: 10px 0; 
+    }
+
+    &_manufacturers {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    &_manufacturers, &_brand {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-bottom: 10px;
+
+        > :first-child {
+            margin-top: 10px;
+        }
+    }
+
+    &_label {
+        display: flex;
+        height: 28px;
+        align-items: center;
+
+        &_count {
+            font-size: 0.8em;
+        }
+
+        :hover {
+            color: $color_1;
+        }
+    }
+
+    &_buttons {
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-around;
+    }
+
+    &_buttons > * {
+        margin-right: 0; /* Отступ между кнопками */
+    }
+    
+    &_buttons > *:last-child {
+        margin-left: 10px;
+    }
+
+    &_price {
+        display: flex;
+        height: 24px;
+        width: 44%;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-colorr);
+        border: none;
+        border-radius: 80px;
+
+        input {
+            height: 100%;
+            width: 80%;
+            outline: none;
+            background: none;
+            border: none;
+            font-size: 12px;
+            text-align: center;
+            color: var(--dark-gray);
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+            /* <-- Apparently some margin are still there even though it's hidden */
+        }
+
+        &_box {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 20px;
+        }
+    }
+}
