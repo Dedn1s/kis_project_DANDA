@@ -8,6 +8,8 @@ import Image from "next/image";
 import Button from "../sub_components/Button/Button";
 import { increaseQuantity, removeFromBasket, decreaseQuantity, finalPrise } from '../functions/basket_functions';
 
+import basket_img from "@/public/basket.png"
+
 export default function Basket() {
 
   const ids = localStorage.getItem('basket');
@@ -65,11 +67,16 @@ export default function Basket() {
                 <p className={styles.price}>{prod[0].price * prod[1]} ₸</p>
               </div>
 
-              <button
-                onClick={() => { removeFromBasket(prod[0].id); setProducts(JSON.parse(localStorage.getItem('basket'))) }}
-              >
-                delete
-              </button>
+              <div className={styles.del_button}>
+                <Button
+                  text=""
+                  textColor="white"
+                  action={() => { removeFromBasket(prod[0].id); setProducts(JSON.parse(localStorage.getItem('basket'))) }}
+                  icon={basket_img}
+                  style={{ width: "58px", height: "58px" }}
+                  icon_style={{ width: "24px", height: "24px" }}
+                />
+              </div>
             </div>
           );
         })
@@ -77,7 +84,7 @@ export default function Basket() {
 
       {/* Кнопка для оформления заказа */}
       {ids_1.length > 0 && (
-        <div>
+        <div className={styles.basket_foot}>
           <Button
             text="Оформить заказ"
             textColor="white"
@@ -88,9 +95,7 @@ export default function Basket() {
             }}
             action={() => { alert("Переход к оформлению заказа") }}
           />
-          <div className={styles.productInfo}>
-            <p className={styles.price}>Итого: {finalPrise()} ₸</p>
-          </div>
+          <p className={styles.price}>Итого: {finalPrise()} ₸</p>
         </div>
       )}
     </div>

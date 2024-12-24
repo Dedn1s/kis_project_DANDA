@@ -122,11 +122,6 @@ export default function Catalog({ params: { lng } }) {
               </form>
             </div>
           </div>
-JavaScript
-
-
-
-
           <div>
             <h2 className={styles.filters_maintext}>Производитель</h2>
             <TextForm
