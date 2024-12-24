@@ -122,7 +122,6 @@ export default function Catalog({ params: { lng } }) {
               </form>
             </div>
           </div>
-
           <div>
             <h2 className={styles.filters_maintext}>Производитель</h2>
             <TextForm
@@ -211,6 +210,3 @@ export default function Catalog({ params: { lng } }) {
     </div>
   );
 };
-
-
-
