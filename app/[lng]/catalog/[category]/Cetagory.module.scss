@@ -11,6 +11,11 @@ $color_1: var(--primary-color);
     gap: 108px;
     width: 80%;
     margin: 0 auto;
+
+    @media(max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+      }
 }
 
 .filters {
