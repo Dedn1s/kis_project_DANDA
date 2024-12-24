@@ -1,6 +1,6 @@
 .footer {
-    background-color: #3F4E65;
-    color: #fff;
+    background-color: var(--gray);
+    color: var(--white);
     padding: 20px 50px 20px;
 }
 
@@ -53,10 +53,10 @@
     background-color: var(--primary-color);
     display: inline-block;
     margin: 0 auto;
-    color: white;
+    color: var(--white);
     border: none;
     padding: 0;
-    font-size: 15px;
+    font-size: 14px;
     height: 50px;
     width: 130px;
     cursor: pointer;
@@ -66,12 +66,12 @@
 }
 
 .input_mail{
-    background-color: #ffffff;
+    background-color: var(--white);
     display: inline-block;
     margin: 0 auto;
-    color: rgb(83, 83, 83);
+    color: var(--gray);
     border: none;
-    padding:  0px 15px 0px;
+    padding:  0px 14px 0px;
     font-size: 10px;
     height: 30px;
     width: 130px;
@@ -82,8 +82,8 @@
 @media (max-width: 768px){
 
     .footer {
-        background-color: #3F4E65;
-        color: #fff;
+        background-color: var(--gray);
+        color: var(--white);
         padding: 5% 2% 5%;
         
     
@@ -191,10 +191,10 @@
     }
     
     .input_mail{
-        background-color: #ffffff;
+        background-color: var(--white);
         display: inline-block;
         margin: 0 auto;
-        color: rgb(83, 83, 83);
+        color: var(--gray);
         border: none;
         padding:  0px 15px 0px;
         font-size: 10px;

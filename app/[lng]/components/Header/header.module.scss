@@ -1,5 +1,5 @@
-$color_1: #3F4E65;
-$background-color_1: white;
+$color_1: var(--primary-header);
+$background-color_1: var(--white);
 
 .header {
 	width: 80%;
@@ -11,8 +11,8 @@ $background-color_1: white;
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: #FFFFFF;
-	border-bottom: 1px solid #3F4E65;
+	background-color: var(--white);
+	border-bottom: 1px solid var(--primary-header);
 }
 
 .loc_name {
@@ -56,12 +56,12 @@ $background-color_1: white;
 	margin-right: 28px;
 	font-size: 14px;
 	font-weight: 400;
-	color: #3F4E65;
+	color: var(--primary-header);
 }
 
 .line {
 	height: 28px;
-	border-left: 1px dashed #3F4E65
+	border-left: 1px dashed var(--primary-header)
 }
 
 .secondaryButton {
@@ -69,7 +69,7 @@ $background-color_1: white;
 	margin-left: 28px;
 	font-size: 14px;
 	font-weight: 400;
-	color: #3F4E65;
+	color: var(--primary-header);
 }
 
 .hat {
@@ -96,7 +96,7 @@ $background-color_1: white;
 
 	p {
 		font-size: 10px;
-		color: #3F4E65;
+		color: var(--primary-header);
 	}
 
 	&_img{
@@ -109,7 +109,7 @@ $background-color_1: white;
 .hat_phone_link2 {
 	font-size: 10px;
 	font-weight: 400;
-	color: #3F4E65;
+	color: var(--primary-header);
 }
 
 
@@ -117,7 +117,7 @@ $background-color_1: white;
 	font-size: 16px;
 	font-weight: 600;
 	text-decoration: none;
-	color: #111111;
+	color: var(--black);
 
 	img {
 		height: 92px;
@@ -129,6 +129,9 @@ $background-color_1: white;
 .hat_bascket {
 	display: flex;
 	margin-left: 12px;
+	border: none;
+	background-color: white;
+	cursor: pointer;
 
 	&_img {
 		height: 44px;
@@ -197,7 +200,7 @@ $background-color_1: white;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-bottom: 1px dashed #3F4E65;
+		border-bottom: 1px dashed var(--primary-header);
 	}
 
 	.sidebar_mobile {
@@ -217,7 +220,7 @@ $background-color_1: white;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: center;
-		border-bottom: 1px dashed #3F4E65;
+		border-bottom: 1px dashed var(--primary-header);
 	}
 
 	.button_mobile {
@@ -386,7 +389,7 @@ $background-color_1: white;
 	.line_mobile {
 		display: block;
 		height: 40px;
-		border-left: 1px dashed #3F4E65;
+		border-left: 1px dashed var(--primary-header);
 	}
 
 }

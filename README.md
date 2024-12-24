@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DANDA site Sultan
 
-## Getting Started
+Краткое описание вашего проекта.
 
-First, run the development server:
+## Содержание
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Установка](#установка)
+- [Использование](#использование)
+- [Тестирование](#тестирование)
+- [Сборка и развертывание](#сборка-и-развертывание)
+- [Лицензия](#лицензия)
+- [Описание коммитов](#описание-коммитов)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Установка
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Для установки проекта выполните следующие шаги:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Клонируйте репозиторий:
+```git clone https://github.com/Dedn1s/kis_project_DANDA```
+2. Переход в директорию:
+```cd kis_project_DANDA```
+3. Установите зависимости:
+```npm install```
 
-## Learn More
+## Использование
 
-To learn more about Next.js, take a look at the following resources:
+Запустите проект в режиме разработки:
+```npm run dev```
+Перейдите по адресу `http://localhost:3000` в вашем браузере, чтобы увидеть приложение.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Тестирование
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Для запуска тестов используйте команду:
+```npm test``` 
 
-## Deploy on Vercel
+## Сборка и развертывание
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Для сборки проекта выполните:
+```npm run build``` 
+После сборки вы сможете развернуть проект на выбранном вами хостинге.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Описание коммитов
+| Название | Описание                                                        |
+|----------|-----------------------------------------------------------------|
+| build	   | Сборка проекта или изменения внешних зависимостей               |
+| sec      | Безопасность, уязвимости                                        |
+| ci       | Настройка CI и работа со скриптами                              |
+| docs	   | Обновление документации                                         |
+| feat	   | Добавление нового функционала                                   |
+| fix	   | Исправление ошибок                                              |
+| perf	   | Изменения направленные на улучшение производительности          |
+| refactor | Правки кода без исправления ошибок или добавления новых функций |
+| revert   | Откат на предыдущие коммиты                                     |
+| style	   | Правки по кодстайлу (табы, отступы, точки, запятые и т.д.)      |
+| test	   | Добавление тестов                                               |

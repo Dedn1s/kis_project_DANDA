@@ -4,6 +4,8 @@ import Button from "../sub_components/Button/Button";
 import TextForm from "../sub_components/TextForm/TextForm"
 import Image from 'next/image'
 
+import { finalPrise } from "../functions/basket_functions";
+
 //импорт фотографий (теперь делаем только так)
 import point_img from "@/public/point.png"
 import messege_img from "@/public/messege.png"
@@ -55,7 +57,6 @@ export const Header = ({ lng }) => {
                         </div>
 
                         <div className={styles.loc_name_block}>
-
                             <Image 
                                 src = {messege_img}
                                 className={styles.loc_name_ico}
@@ -95,7 +96,7 @@ export const Header = ({ lng }) => {
                     <Button
                         text={t('cat')} 
                         textColor="white"
-                        href=""
+                        href="/catalog/none"
                         style={{ width: "180px", height: "59px" }}
                         icon= {catalog_img}
                         icon_style={{width: "30px", height: "30px"}}
@@ -127,13 +128,13 @@ export const Header = ({ lng }) => {
                     <Button
                         text={t('pricelist')}
                         textColor="white"
-                        onClick={() => alert("Кнопка в разработке")}
+                        action={() => alert("Кнопка в разработке")}
                         style={{ width: "180px", height: "59px" }}
                         icon= {download_img}
                         icon_style={{width: "30px", height: "30px"}}
                     />
 
-                    <div className={styles.hat_bascket}>
+                    <button onClick={() => window.location = '/basket'} className={styles.hat_bascket}>
                     	<Image 
                             src = {bascket_img}
                             className={styles.hat_bascket_img}
@@ -141,9 +142,9 @@ export const Header = ({ lng }) => {
                         </Image>
                         <div className={styles.hat_bascket_text}>
                             <p className={styles.loc_name_text2}>{t('basket')}</p>
-                            <p className={styles.loc_name_text1}>12 478</p>
+                            <p className={styles.loc_name_text1}>{finalPrise()} ₸</p>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
 

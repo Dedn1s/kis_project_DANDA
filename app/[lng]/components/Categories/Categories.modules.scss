@@ -1,8 +1,8 @@
 $color_1: var(--primary-color);
-$color_2: black;
+$color_2: var(--black);
 $color_3: rgb(63, 78, 101);
 $font-family_1: var(--font-inter), sans-serif;
-$background-color_1: #f9f6f2;
+$background-color_1: var(--white);
 
 .categories-container {
 	display: flex;
@@ -39,11 +39,11 @@ $background-color_1: #f9f6f2;
 }
 .category-card {
 	text-align: center;
-	margin-right: 15px;
+	margin-right: 16px;
 	text-decoration: none;
 	color: $color_2;
 	width: 250px;
-	height: 291px;
+	height: 292px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -105,7 +105,7 @@ body {
 		text-align: left;
 		text-transform: uppercase;
 		color: $color_1;
-		margin-bottom: 5px;
+		margin-bottom: 4px;
 	}
 	.subtitle {
 		font-size: 12px;
