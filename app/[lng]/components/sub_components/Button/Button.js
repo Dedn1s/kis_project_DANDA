@@ -23,24 +23,13 @@ export default function Button({
 
     if (href) {
         return (
-            <button
-            onClick= {() => window.location = '/catalog/none'}
-            className={buttonClass}
-            style={customStyle}
-            aria-disabled="true"
-        >
-            {text}
-
-            {icon && text && <Image
-                src={icon}
-                className={styles.icon_text}
-                style={icon_style}></Image>}
-
-            {icon && text === "" && <Image
-                src={icon}
-                className={styles.icon}
-                style={icon_style}></Image>}
-        </button>
+            <Link href={href} className={buttonClass} style={customStyle}>
+                {text}
+                {icon && <Image
+                    src={icon}
+                    className={styles.icon}
+                    style={icon_style}></Image>}
+            </Link>
         );
     }
 

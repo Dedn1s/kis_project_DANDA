@@ -10,13 +10,10 @@ import { CategoriesList } from '../../components/CategoriesList';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import Button from '../../components/sub_components/Button/Button';
-import Breadcrumb from "../../components/sub_components/Breadcrumb";
-import TextForm from "../../components/sub_components/TextForm/TextForm"
 
 import styles from "./Cetagory.module.scss"
 
-import search_img from "@/public/search.png";
-import catalog_img from "@/public/basket.png" 
+import catalog_img from "@/public/catalog.png"//временное фото, добавь фото карзины 
 
 export default function Catalog({ params: { lng } }) {
 
@@ -87,23 +84,14 @@ export default function Catalog({ params: { lng } }) {
     setFilteredProducts(products);
   };
 
-  const breadcrumbItems = [
-    { name: 'Главная', path: '/' },
-    {
-      name: params.category,
-      path: '/'
-    },
-  ];
-
   return (
     <div>
       <Header lng={lng}/>
-      <Breadcrumb breadcrumbItems={breadcrumbItems} lng={lng} />
       <div className={styles.all_page}>
         <div className={styles.filters}>
-          <h2 className={styles.main_text}>ПОДБОР ПО ПАРАМЕТРАМ</h2>
+          <h2 className={styles.main_text}>Подбор по параметрам</h2>
           <div>
-            <p className={styles.filters_subtext}>Цена ₸</p>
+            <p className={styles.filters_subtext}>Цена</p>
             <div className={styles.filters_price_box}>
               <form className={styles.filters_price}>
                 <input
@@ -122,17 +110,9 @@ export default function Catalog({ params: { lng } }) {
               </form>
             </div>
           </div>
+
           <div>
             <h2 className={styles.filters_maintext}>Производитель</h2>
-            <TextForm
-                text={t('Поиск...')}
-                type="search"
-                onClick={() => alert("Поиск в разработке")}
-                style={{ width: "238px", height: "59px" }}
-                style_button={{ width: "40px", height: "40px" }}
-                icon= {search_img}
-                style_icon={{width:"25px", height:"25px"}}
-            />
             <div className={styles.filters_manufacturers}>
               {all_manufacturers.map(manufacturer => (
                 <label key={manufacturer} className={styles.filters_label}>
@@ -151,20 +131,10 @@ export default function Catalog({ params: { lng } }) {
                 </label>
               ))}
             </div>
-            <div className={styles.filters_separator}></div>
           </div>
 
           <div>
-            <h2 h2 className={styles.filters_maintext}>Бренд</h2>
-            <TextForm
-                text={t('Поиск...')}
-                type="search"
-                onClick={() => alert("Поиск в разработке")}
-                style={{ width: "238px", height: "59px" }}
-                style_button={{ width: "40px", height: "40px" }}
-                icon= {search_img}
-                style_icon={{width:"25px", height:"25px"}}
-            />
+            <h2 h2 className={styles.filters_maintext}>Бренды</h2>
             <div className={styles.filters_brand}>
               {all_brands.map(brand => (
                 <label key={brand} className={styles.filters_label}>
@@ -187,17 +157,17 @@ export default function Catalog({ params: { lng } }) {
 
           <div className={styles.filters_buttons}>
             <Button
-              text="Показать"
+              text="Применить"
               textColor="white"
               action={applyFilters}
-              style={{ width: "169px", height: "59px", fontsize: "14px" }}
+              style={{ width: "120px", height: "40px", fontsize: "1em" }}
             />
             <Button
               text=""
               textColor="white"
               action={resetFilters}
               icon={catalog_img}
-              style={{ width: "58px", height: "58px" }}
+              style={{ width: "40px", height: "40px" }}
               icon_style={{width: "24px", height: "24px"}}
             />
           </div>
@@ -210,3 +180,6 @@ export default function Catalog({ params: { lng } }) {
     </div>
   );
 };
+
+
+

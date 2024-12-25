@@ -1,13 +1,15 @@
+
+
 import styles from './Breadcrumb.module.scss'
-//import { useWindowSize } from "@uidotdev/usehooks";
+import { useWindowSize } from "@uidotdev/usehooks";
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 
 const Breadcrumb = ({ breadcrumbItems = [] }, { lng }) => {
-  //const { isTablet, isMobile } = useWindowSize();
+  const { isTablet, isMobile } = useWindowSize();
   const { t } = useTranslation(lng, 'bread');
-/*
+
   if (isMobile || isTablet) {
     const previousPath =
       breadcrumbItems.length > 1
@@ -15,7 +17,7 @@ const Breadcrumb = ({ breadcrumbItems = [] }, { lng }) => {
         : '/';
     return (
       <div className={styles.container}>
-        <div className={styles.goBackButton}>
+        <div className={styles.backButton}>
           <Link
             href={previousPath}
             style={{ textDecoration: 'none' }}
@@ -28,7 +30,8 @@ const Breadcrumb = ({ breadcrumbItems = [] }, { lng }) => {
       </div>
     );
   }
-*/
+
+  if (breadcrumbItems.length === 0) return null;
   return (
     <nav aria-label="breadcrumb">
       <ul className={styles.breadcrumb}>
