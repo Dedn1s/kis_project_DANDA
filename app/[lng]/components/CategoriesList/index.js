@@ -14,7 +14,7 @@ export const CategoriesList = ({ lng }) => {
     return (
         <div className={styles.list}>
             <h1 className={styles.mainText}>Категории</h1>
-            {/*<p>{t('example1')}</p> пример вызова локализации(нужно будет удалить)*/}
+            <p>{t('example1')}</p>{/* пример вызова локализации(нужно будет удалить)*/}
             {categories.map((cat) => (
                 <div>
                     <Link href={`/catalog/${cat.url}`} className={styles.list_category}>
